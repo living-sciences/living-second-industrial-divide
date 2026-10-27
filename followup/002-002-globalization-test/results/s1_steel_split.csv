@@ -1,0 +1,5 @@
+series,geo,year,value,source,label
+crude_steel_pct_BOF,China,2024,89.8,worldsteel World Steel in Figures 2025 (staged),"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+crude_steel_pct_EAF,China,2024,10.2,worldsteel 2025 (staged),"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+crude_steel_pct_BOF,United States,2024,28.2,worldsteel 2025 (staged),"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+crude_steel_pct_EAF,United States,2024,71.8,worldsteel 2025 (staged),"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"

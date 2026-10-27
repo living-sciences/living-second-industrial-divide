@@ -1,0 +1,70 @@
+{
+ "S1a_VA_share": {
+  "CHN_2004": 8.51,
+  "CHN_2011": 20.21,
+  "CHN_2023": 27.92,
+  "USA_2004": 21.92,
+  "USA_2011": 15.56,
+  "USA_2021": 15.46,
+  "note_pre2004_CHN": "pre-2004 China VA-share cells were specced from recency-research.md 5.4 literature values; that file is NOT in this run's staged inputs, so pre-2004 China cells are NOT substituted from memory (deviation). WDI staged series begins 2004."
+ },
+ "S1b_BDS_manuf": {
+  "small_share_1978": 27.69,
+  "small_share_2011": 37.23,
+  "small_share_2023": 32.53,
+  "mean_size_1978": 58.74,
+  "mean_size_2011": 39.16,
+  "mean_size_2023": 45.82,
+  "source": "001 results/claim_D1_manufacturing.csv (BDS 2023, reused read-only)"
+ },
+ "S1c_EU_SBS": {
+  "small_lt50_share_2011": 34.84,
+  "small_lt50_share_2020": 30.17,
+  "small_lt50_share_2021": 30.4,
+  "small_lt50_share_2023": 29.23,
+  "large_ge250_share_2011": 40.14,
+  "large_ge250_share_2020": 48.3,
+  "note": "two panels, dataset break 2020/2021 (indicator + size-class codes change). PS-PROV-2 correction (study 003): keys relabeled _2005 -> _2011; the EU27_2020 SBS aggregate is absent pre-2011 in the staged sbs_sc_ind_r2 file, so 34.84/40.14 are the 2011 values ('2005-2020' is the dataset's nominal span, not this value's vintage). s1_eu_sizeclass.csv already honest (year=2011); E3 window (2011-2026) unaffected."
+ },
+ "S1d_INDSTAT": {
+  "staged": false,
+  "status": "excluded (H3): UNIDO INDSTAT is registration-gated; S1 verdict rests on US/EU size series plus hub-share data. No workaround."
+ },
+ "S1_steel": {
+  "CHN_BOF_pct": 89.8,
+  "USA_EAF_pct": 71.8,
+  "label": "[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]",
+  "note": "spec PREVIEW label stated China ~91.6% BOF (the 91.6 is the Austria row in the staged table); computed China BOF = 89.8%. US majority-EAF confirmed (71.8%)."
+ },
+ "S1e_megaplant": {
+  "row": "mega-plant descriptive (DESCRIPTIVE ONLY, NO verdict weight)",
+  "note": "Foxconn/EMS assembly-giant scale (Zhengzhou 'iPhone City') illustrates assembly-giant concentration; descriptive only, no verdict weight. PS-PROV-5 correction (study 003): the from-memory '~200k-350k at peak' employment figure had no staged source and is REMOVED. Staged texts checked (Kaplinsky 2023, WTO GVC ch.1 & ch.2, Schwartz 2024) contain no citable single-plant employment figure -- Kaplinsky names Foxconn only as a triangular-governance intermediary -- so no value is moved to s1_scale.csv."
+ },
+ "S2": {
+  "SoP2_interm_1988": 24.25,
+  "SoP2_interm_2023": 20.81,
+  "SoP2_min": 19.45,
+  "SoP2_max": 24.92,
+  "SoP3_consumer_1988": 30.51,
+  "SoP3_consumer_2023": 32.73,
+  "mob_CHN_1995_2023": [
+   0.3,
+   128.2
+  ],
+  "label": "weakly measured; smartphone/mobile diffusion is the measurable leg"
+ },
+ "S3": {
+  "SoP2_flat": [
+   24.25,
+   20.81
+  ],
+  "SoP2_min_max": [
+   19.45,
+   24.92
+  ],
+  "wto_gvc_share_peak_2022": 48.0,
+  "wto_gvc_share_2024": 46.3,
+  "participation": "rose 1995-2011 then plateaued post-2011 (WTO Fig 2.8); US-China bilateral ~30% below trend since 2018 tariffs (WTO ch.1)",
+  "source_label": "fallback (TiVA endpoint degraded 2026-10-27 and at run time)"
+ }
+}

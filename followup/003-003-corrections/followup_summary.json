@@ -1,0 +1,157 @@
+{
+  "instruction_summary": "Corrective study 003: apply exactly the five audit-conformance corrections (PS-PROV-1..5) to parent studies 001 and 002, relabel mislabeled vintages / source-or-remove unsourced numbers (no verdict or grid-cell changes, no score), record the China-BOF preview correction, and log every old -> new change.",
+  "completed": true,
+  "steps": [
+    {
+      "description": "Env: create venv, install pandas/numpy/matplotlib (for figures)",
+      "command": "uv venv /workspace/.venv && uv pip install pandas numpy matplotlib",
+      "exit_code": 0,
+      "outputs": ["/workspace/.venv"]
+    },
+    {
+      "description": "Recompute cold: WDI NV.IND.MANF.ZS coverage per country (true first/last non-missing years)",
+      "command": "awk over wdi_manufacturing_trade_1960_2025.csv",
+      "exit_code": 0,
+      "outputs": ["(verification: USA 1997->2021, DEU 1991->2023, JPN 1994->2023)"]
+    },
+    {
+      "description": "PS-PROV-1: relabel P1 VA vintage on all four 001 surfaces (findings.md, report.md, followup_summary.json, claim_P1_va.csv) + seam note",
+      "command": "Edit + Write",
+      "exit_code": 0,
+      "outputs": [
+        "followup/001-001-claims-and-predictions/results/findings.md",
+        "followup/001-001-claims-and-predictions/report.md",
+        "followup/001-001-claims-and-predictions/followup_summary.json",
+        "followup/001-001-claims-and-predictions/results/claim_P1_va.csv"
+      ]
+    },
+    {
+      "description": "PS-PROV-3: correct two stale C4 'literature-quoted' log notes to honest not-checkable (data)",
+      "command": "Edit",
+      "exit_code": 0,
+      "outputs": [
+        "followup/001-001-claims-and-predictions/results/gates.json",
+        "followup/001-001-claims-and-predictions/results/fetch_log.json"
+      ]
+    },
+    {
+      "description": "PS-PROV-4: add B1 [PREVIEW-CALIBRATED] label block to 001 gates.json, mirroring 002's format",
+      "command": "Edit",
+      "exit_code": 0,
+      "outputs": ["followup/001-001-claims-and-predictions/results/gates.json"]
+    },
+    {
+      "description": "Recompute cold: EU SBS small-plant series first available year (2011) and worldsteel BOF table (Austria 91.6 vs China 89.8)",
+      "command": "cat s1_eu_sizeclass.csv; grep 91.6/89.8/Austria worldsteel2025.txt",
+      "exit_code": 0,
+      "outputs": ["(verification: EU27_2020 first year 2011 = 34.84%; Austria Oxygen 91.6%, China Oxygen 89.8%)"]
+    },
+    {
+      "description": "PS-PROV-2: relabel EU SBS '34.8% (2005)' -> '(2011)' on findings.md, report.md, card M2, both keyresults JSONs, build_signatures.py keys",
+      "command": "Edit + python relabel",
+      "exit_code": 0,
+      "outputs": [
+        "followup/002-002-globalization-test/results/findings.md",
+        "followup/002-002-globalization-test/report.md",
+        "followup/002-002-globalization-test/result_card.json",
+        "followup/002-002-globalization-test/results/_grid_keyresults.json",
+        "followup/002-002-globalization-test/results/_s1s3_keyresults.json",
+        "followup/002-002-globalization-test/workspace/build_signatures.py"
+      ]
+    },
+    {
+      "description": "PS-PROV-5: search staged texts for a citable Foxconn figure (none found) -> REMOVE '~200k-350k' from both keyresults JSONs, keep qualitative sentence",
+      "command": "grep staged texts; python remove",
+      "exit_code": 0,
+      "outputs": [
+        "followup/002-002-globalization-test/results/_grid_keyresults.json",
+        "followup/002-002-globalization-test/results/_s1s3_keyresults.json"
+      ]
+    },
+    {
+      "description": "Item 6: write preview_corrections.md (China BOF 91.6 -> 89.8, worldsteel Austria-row evidence, flagged for H1 + spec/PROVENANCE; spec NOT edited)",
+      "command": "Write",
+      "exit_code": 0,
+      "outputs": ["results/preview_corrections.md"]
+    },
+    {
+      "description": "Write card_corrections.csv (18 old -> new rows) and validate all edited JSON",
+      "command": "python csv writer; json.load checks",
+      "exit_code": 0,
+      "outputs": ["results/card_corrections.csv"]
+    },
+    {
+      "description": "Figures: VA vintage, EU SBS vintage, China-BOF preview bar",
+      "command": "python -I figures.py",
+      "exit_code": 0,
+      "outputs": [
+        "results/fig1_p1_va_vintage.png",
+        "results/fig2_eu_sbs_vintage.png",
+        "results/fig3_china_bof_preview.png"
+      ]
+    }
+  ],
+  "key_results": {
+    "corrections_applied": "5 (PS-PROV-1..5) + 1 record-keeping (item 6); all six done",
+    "verdict_or_grid_changes": "0 (none, by design)",
+    "numeric_score": "none (score-free GO-WITH-SCOPE rule inherited)",
+    "PS_PROV_1_P1_VA_true_years": "USA 1997->2021 (16.09->10.53), DEU 1991->2023 (24.62->18.94), JPN 1994->2023 (23.39->19.49); WDI NV.IND.MANF.ZS has no 1984 value; FRED employment leg (1984->2025) is vintage-clean and drives the verdict",
+    "PS_PROV_3_C4_notes": "two stale 'literature-quoted (Minerals Yearbook + Barnett&Crandall)' notes corrected to not-checkable (data)",
+    "PS_PROV_4_B1_label": "added [PREVIEW-CALIBRATED] B1 saturation-rule block to 001 gates.json",
+    "PS_PROV_2_EU_SBS": "34.8% relabeled (2005)->(2011); EU27_2020 SBS absent pre-2011; CSV already honest; E3 window unaffected",
+    "PS_PROV_5_foxconn": "no citable figure in staged texts (Kaplinsky/WTO/Schwartz) -> '~200k-350k' REMOVED, qualitative sentence kept, nothing moved to s1_scale.csv",
+    "item6_china_bof": "spec PREVIEW 91.6% = worldsteel Austria row; true China BOF = 89.8%; recorded in preview_corrections.md, spec not edited"
+  },
+  "comparison_to_original": [
+    {
+      "quantity": "P1 manufacturing VA-share vintage label (study 001)",
+      "original": "1984->2023 (US 16.1->10.5, DE 24.6->18.9, JP 23.4->19.5)",
+      "followup": "US 1997->2021, DE 1991->2023, JP 1994->2023 (same values, true years)",
+      "source_file": "followup/001-001-claims-and-predictions/results/claim_P1_va.csv (pre-edit) + staged wdi_manufacturing_trade_1960_2025.csv (NV.IND.MANF.ZS)",
+      "note": "nearest-year substitution relabeled to TRUE WDI coverage; verdict direction unaffected (FRED employment leg drives it)"
+    },
+    {
+      "quantity": "C4 historical-EAF branch note (study 001)",
+      "original": "literature-quoted (Minerals Yearbook via OA + Barnett&Crandall); USGS DS140 unavailable",
+      "followup": "not-checkable (data): no OA Minerals-Yearbook/Barnett&Crandall quote ever staged or used; USGS DS140 blocked",
+      "source_file": "followup/001-001-claims-and-predictions/results/gates.json (A3) + fetch_log.json",
+      "note": "stale note claimed a branch that was never staged; corrected to the outputs' honest state"
+    },
+    {
+      "quantity": "EU27 small-plant (<50 emp) share start-year label (study 002)",
+      "original": "34.8% (2005)",
+      "followup": "34.8% (2011)",
+      "source_file": "followup/002-002-globalization-test/results/s1_eu_sizeclass.csv (year=2011) + build_signatures.py (p1rows[0].year==2011)",
+      "note": "EU27_2020 SBS aggregate absent pre-2011; '2005-2020' is dataset nominal span; CSV already honest; E3 window unaffected"
+    },
+    {
+      "quantity": "Mega-plant Foxconn employment figure (study 002)",
+      "original": "~200k-350k at peak (from memory, no staged source)",
+      "followup": "REMOVED (qualitative sentence kept; no staged citable figure)",
+      "source_file": "followup/002-002-globalization-test/results/_grid_keyresults.json + _s1s3_keyresults.json (S1e)",
+      "note": "staged texts carry no single-plant headcount; descriptive-only row, no verdict weight"
+    },
+    {
+      "quantity": "China crude-steel BOF share (spec PREVIEW constant)",
+      "original": "China ~91.6% BOF (= worldsteel Austria row)",
+      "followup": "China 89.8% BOF (computed)",
+      "source_file": "worldsteel 2025 'Crude steel production by process' table (staged); study 002 results/s1_steel_split.csv already carried 89.8",
+      "note": "recorded in preview_corrections.md, flagged for H1 re-grade + spec/PROVENANCE; spec not edited; gates nothing (R-6)"
+    }
+  ],
+  "artifacts": [
+    "results/card_corrections.csv",
+    "results/preview_corrections.md",
+    "results/fig1_p1_va_vintage.png",
+    "results/fig2_eu_sbs_vintage.png",
+    "results/fig3_china_bof_preview.png"
+  ],
+  "deviations": [
+    "No verdict word or evidence-grid cell changed; no numeric/pooled score produced (inherited GO-WITH-SCOPE rule) -- by design.",
+    "Item 6 recorded in preview_corrections.md and flagged forward; the spec itself was NOT edited (orchestrator's file).",
+    "Item 4 touched report.md, both keyresults JSONs and build_signatures.py in addition to the three named surfaces, because they also carried the 2005 label ('any other surface carrying the 2005 label'); build_signatures.py was fixed but NOT re-run.",
+    "Item 5 resolved to a REMOVAL (not a citation) because the staged texts contained no citable Foxconn/single-plant employment figure -- the instruction's explicit fallback.",
+    "Item 1 also relabeled two further reader-facing 001 surfaces that carried the mislabel (results/scorecard.csv, results/_blockB_keyresults.json). 001's generator scripts (analyze.py, scorecard.py) keep the internal 'va_share_1984' key name: not a result surface, not named in item 1, not re-run -- left untouched to avoid scope creep (unlike item 4, where build_signatures.py was explicitly named as the cause and its _2005 keys were fixed)."
+  ],
+  "remaining": []
+}

@@ -1,0 +1,571 @@
+{
+  "generated": "2026-10-27",
+  "study": "001-claims-and-predictions",
+  "launch_line": "REPLICATION: NOT APPLICABLE \u2014 BOOK, GO-WITH-SCOPE (Phase 0); THIS STUDY IS THE VERIFICATION LAYER",
+  "A1_hash_integrity": {
+    "declared_files_checked": 13,
+    "matched": 13,
+    "mismatched": [],
+    "files": [
+      {
+        "file": "worldbank-wdi/wdi_manufacturing_trade_1960_2025.csv",
+        "expected": "6e33494746a95aa2ee9a7933ac6388915203e2c070e1489b73d7022b36342bdc",
+        "got": "6e33494746a95aa2ee9a7933ac6388915203e2c070e1489b73d7022b36342bdc",
+        "match": true
+      },
+      {
+        "file": "worldbank-wdi/wdi_durables_diffusion_demand_side.csv",
+        "expected": "4919c90924067d434057b0159cd634c1e6d6aa8a0025ad598e0404aa515e39eb",
+        "got": "4919c90924067d434057b0159cd634c1e6d6aa8a0025ad598e0404aa515e39eb",
+        "match": true
+      },
+      {
+        "file": "wits-intermediates/wits_unctad_sop_product_shares.csv",
+        "expected": "e3efc0453b8d115126062a11df82a47c3752c48c4f7e13a17e70341e1cb809ce",
+        "got": "e3efc0453b8d115126062a11df82a47c3752c48c4f7e13a17e70341e1cb809ce",
+        "match": true
+      },
+      {
+        "file": "census-bds/bds2023_ez.csv",
+        "expected": "c3310039b69987ee5838826a626bbf00d0bfa3dba79a805ae03572fdd8b116ca",
+        "got": "c3310039b69987ee5838826a626bbf00d0bfa3dba79a805ae03572fdd8b116ca",
+        "match": true
+      },
+      {
+        "file": "census-bds/bds2023_sec_ez.csv",
+        "expected": "ccc20556eca518bd1c285212642fee74e1c622167b3bb660fe5f630f082219d8",
+        "got": "ccc20556eca518bd1c285212642fee74e1c622167b3bb660fe5f630f082219d8",
+        "match": true
+      },
+      {
+        "file": "eurostat/nama_10r_2gdp_emilia_romagna.json",
+        "expected": "54ac84e960db2da1c4581a854f64b5b1c9f9b2c667b5c77ed5ef1f92b591bc4a",
+        "got": "54ac84e960db2da1c4581a854f64b5b1c9f9b2c667b5c77ed5ef1f92b591bc4a",
+        "match": true
+      },
+      {
+        "file": "eurostat/sbs_sc_ind_r2_manufacturing_sizeclass.json",
+        "expected": "074258f2d4af172daa4594053e548caa6936a204909de7f3063a9f5542f6991d",
+        "got": "074258f2d4af172daa4594053e548caa6936a204909de7f3063a9f5542f6991d",
+        "match": true
+      },
+      {
+        "file": "eurostat/sbs_sc_ovw_manufacturing_sizeclass.json",
+        "expected": "f286f523317f80b792c87b1abd23631a20ef3c4b9cc270f82b8d25abf2afb25d",
+        "got": "f286f523317f80b792c87b1abd23631a20ef3c4b9cc270f82b8d25abf2afb25d",
+        "match": true
+      },
+      {
+        "file": "steel/world-steel-in-figures-2025.pdf",
+        "expected": "a830f0b9cb8237dc5131145cffb8ff6eb7ce5b5f0930f6abf8ff6fc383da48d4",
+        "got": "a830f0b9cb8237dc5131145cffb8ff6eb7ce5b5f0930f6abf8ff6fc383da48d4",
+        "match": true
+      },
+      {
+        "file": "owid-durables/us_household_technology_adoption.csv",
+        "expected": "4436d028351dd2e1deae5521db76f77a8b3b6b72a75fb1d2ca88ba9ff518cc5a",
+        "got": "4436d028351dd2e1deae5521db76f77a8b3b6b72a75fb1d2ca88ba9ff518cc5a",
+        "match": true
+      },
+      {
+        "file": "census-statab/hs-42-selected-communications-media-1920-2001.pdf",
+        "expected": "55804674e8ecb19d565476e2359fccfa62fad9f2e455f57bbe9b432a52b0d7c4",
+        "got": "55804674e8ecb19d565476e2359fccfa62fad9f2e455f57bbe9b432a52b0d7c4",
+        "match": true
+      },
+      {
+        "file": "wto-gvc-report/gvcreport2025-01_e.pdf",
+        "expected": "50de298a3b30a86cb998180fd0cd0f60799388b50d27c2f3daaf678652843dca",
+        "got": "50de298a3b30a86cb998180fd0cd0f60799388b50d27c2f3daaf678652843dca",
+        "match": true
+      },
+      {
+        "file": "wto-gvc-report/gvcreport2025-02_e.pdf",
+        "expected": "f79ca87c10b5b3cdc80a4958125d94b3804b5344f5f3d89b13b37fb8e16b9131",
+        "got": "f79ca87c10b5b3cdc80a4958125d94b3804b5344f5f3d89b13b37fb8e16b9131",
+        "match": true
+      }
+    ],
+    "literature_present_no_staged_hash": [
+      "baldwin2006_unbundling.pdf",
+      "berger2013_toward_third_industrial_divide.pdf",
+      "bhengu2001_uct_thesis_flexible_specialisation.pdf",
+      "carlsson1988_iui_wp203_manufacturing_technology_plant_size.pdf",
+      "gereffi-humphrey-sturgeon-2005-gvc-governance.pdf",
+      "hampson1991_postfordism_regulation_school_jape28.pdf",
+      "istat-storie-di-dati-regionali-emilia-romagna.pdf",
+      "kaplinsky2023_gvc_rise_fall_deep_globalisation.pdf",
+      "rinaldi-emilia-romagna-income-history.pdf",
+      "schwartz2024_third_divide.html",
+      "sturgeon2008-commodity-to-value-chains-isa-wp.pdf"
+    ]
+  },
+  "A1b_attribution_locators": {
+    "checks": [
+      {
+        "row": "B1",
+        "source": "BHEN",
+        "locator": "by 1979 there was one car for every",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B1",
+        "source": "BHEN",
+        "locator": "households had television sets by 1970",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B1",
+        "source": "BHEN",
+        "locator": "(Piore & Sabel, 1984: 184)",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B1",
+        "source": "BERG",
+        "locator": "saturation of mass consumer-good markets",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B1",
+        "source": "HAMP",
+        "locator": "According to Piore and Sabel, domestic markets for mass produced goods became saturated",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B2",
+        "source": "BHEN",
+        "locator": "Given the rigid wages and prices central to the system of macroeconomic regulation",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B2",
+        "source": "BHEN",
+        "locator": "(Piore & Sabel, 1984: 176)",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B2",
+        "source": "SCHW",
+        "locator": "overly rigid production structure",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B2",
+        "source": "SCHW",
+        "locator": "presented a multitude of shocks",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B3",
+        "source": "SCHW",
+        "locator": "overly rigid production structure",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "B3",
+        "source": "HAMP",
+        "locator": "the limits of the model of industrial development that is founded on mass production",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C1",
+        "source": "SCHW",
+        "locator": "ideal model for a better future",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C1",
+        "source": "RIN",
+        "locator": "Piore e Sabel 1984",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C1",
+        "source": "STUR",
+        "locator": "provided by Piore and Sabel (1984)",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C5",
+        "source": "BHEN",
+        "locator": "the application of computers to industry favours flexible systems",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C5",
+        "source": "BHEN",
+        "locator": "(Piore & Sabel, 1984: 258)",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C5",
+        "source": "BHEN",
+        "locator": "programmable equipment is used just as automatic machinery was used in the past",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C5",
+        "source": "BHEN",
+        "locator": "(Piore & Sabel, 1984: 261)",
+        "expected": 2,
+        "count": 2,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C5",
+        "source": "BERG",
+        "locator": "computer-aided manufacturing (programmable assembly) might make it efficient and profitable to adjust equipment",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "D1",
+        "source": "SCHW",
+        "locator": "shrink themselves via outsourcing and demerger",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "D1",
+        "source": "SCHW",
+        "locator": "drove the vertical disintegration that",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "D1",
+        "source": "CARL",
+        "locator": "have argued that the United States is currently in a period of transition from mass production to",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "D1",
+        "source": "CARL",
+        "locator": "average establishment size declined by 12.3",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "C2C3",
+        "source": "BERG",
+        "locator": "the Italian and French industrial districts and the German and Japanese middle-firm sectors",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P1",
+        "source": "SCHW",
+        "locator": "improbable expansion of mass production and thus Keynesian policy of demand management to the global level",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P1",
+        "source": "BERG",
+        "locator": "One family of solutions would be a global Keynesianism",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P1",
+        "source": "BERG",
+        "locator": "multinational Keynesian order",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P2",
+        "source": "SCHW",
+        "locator": "They saw only two paths out of the problems animating the debate",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P2",
+        "source": "BERG",
+        "locator": "apportion the expansion of productive capacity among the advanced industrial countries",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P2",
+        "source": "BHEN",
+        "locator": "They moved into mass-produced consumer durables",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P2",
+        "source": "BHEN",
+        "locator": "(Piore & Sabel, 1984: 188)",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P3",
+        "source": "SCHW",
+        "locator": "The other was a transformation of the industrial base in the direction of flexible specialization",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P3",
+        "source": "SCHW",
+        "locator": "narrow slice of industrial output",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P3",
+        "source": "SCHW",
+        "locator": "a potential second divide, for a return to flexible specialization",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P3",
+        "source": "BERG",
+        "locator": "nourish and strengthen flexible specialization and craft production",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P4",
+        "source": "HAMP",
+        "locator": "a political choice between the technology of",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      },
+      {
+        "row": "P4",
+        "source": "SCHW",
+        "locator": "utter indeterminacy of any given divide",
+        "expected": 1,
+        "count": 1,
+        "hit": true,
+        "meets_expected": true
+      }
+    ],
+    "total_checks": 37,
+    "all_meet_expected": true,
+    "attribution_status_by_row": {
+      "B1": {
+        "verified": [
+          "BHEN",
+          "BERG",
+          "HAMP"
+        ],
+        "status": "double-sourced"
+      },
+      "B2": {
+        "verified": [
+          "BHEN",
+          "SCHW"
+        ],
+        "status": "double-sourced"
+      },
+      "B3": {
+        "verified": [
+          "SCHW",
+          "HAMP"
+        ],
+        "status": "double-sourced (scoped: internal-exhaustion diagnosis)"
+      },
+      "C1": {
+        "verified": [
+          "SCHW",
+          "RIN",
+          "STUR"
+        ],
+        "status": "double-sourced (scoped: E-R ideal-model)"
+      },
+      "C4": {
+        "verified": [],
+        "status": "demoted: not-checkable (attribution) [pre-declared; no steel anchor in corpus]"
+      },
+      "C5": {
+        "verified": [
+          "BHEN",
+          "BERG"
+        ],
+        "status": "double-sourced"
+      },
+      "D1": {
+        "verified": [
+          "SCHW"
+        ],
+        "carl_general_thesis_only": true,
+        "status": "demoted: not-checkable (attribution) [pre-declared; CARL general-thesis insufficient for D1 wording]"
+      },
+      "C2C3": {
+        "verified": [
+          "BERG"
+        ],
+        "status": "demoted: not-checkable (attribution) [pre-declared single-source]"
+      },
+      "P1": {
+        "verified": [
+          "SCHW",
+          "BERG"
+        ],
+        "status": "double-sourced"
+      },
+      "P3": {
+        "verified": [
+          "SCHW",
+          "BERG"
+        ],
+        "status": "double-sourced"
+      },
+      "P2": {
+        "verified": [
+          "SCHW",
+          "BERG",
+          "BHEN"
+        ],
+        "status": "handed to study 002"
+      },
+      "P4": {
+        "verified": [
+          "HAMP",
+          "SCHW"
+        ],
+        "status": "not graded ([INTERP]); attribution recorded, not required"
+      },
+      "D2": {
+        "verified": [],
+        "status": "not graded ([LIT]); attribution not required"
+      }
+    }
+  },
+  "A2_coverage": {
+    "bds_max_year_2023": true,
+    "wits_1988_2023": true,
+    "eurostat_er_2000_2024": true,
+    "owid_entities_nonempty_through_1973": {
+      "Automobile": true,
+      "Household refrigerator": true,
+      "Washing machine": true
+    },
+    "hs42_1973_TV_present": true,
+    "hs42_TV_1973": 96.4,
+    "hs42_TV_1984": 98.1,
+    "bds_esize_breaks": [
+      "a) 1 to 4",
+      "b) 5 to 9",
+      "c) 10 to 19",
+      "d) 20 to 99",
+      "e) 100 to 499",
+      "f) 500 to 999",
+      "g) 1000+"
+    ],
+    "note": "'<100 emp' small-establishment band = esize a+b+c+d",
+    "status": "PASS"
+  },
+  "A3_staging_branch_flags": {
+    "williams1987_staged": false,
+    "indstat_staged": false,
+    "usgs_ds140_staged": false,
+    "C4_D1_restoration_events_fired": false,
+    "C4_historical_eaf_branch": "not-checkable (data): the 1970s-84 US EAF level has no staged supply route -- USGS DS140 is blocked and no OA Minerals-Yearbook/Barnett&Crandall quote was ever staged or used. Corrected PS-PROV-3 (study 003): the earlier 'literature-quoted (Minerals Yearbook via OA + Barnett&Crandall)' branch was never staged and is not real; only the 2024 worldsteel endpoint is computable.",
+    "williams1987_disclosure_required_verbatim": true
+  },
+  "preview_calibration_labels_PS_C1": {
+    "note": "Added PS-PROV-4 (study 003, cosmetic): PS-C1 lists gates.json as a mandatory surface for preview-calibration labels; mirrors study 002's gates label-block format.",
+    "B1_saturation_rule": "[PREVIEW-CALIBRATED: 1973 OWID/HS-42 values in view at spec time - Automobile 82.0 (ratio .943), Household refrigerator 99.0 (1.000), Washing machine 66.0 (.930), TV 96.4% HS-42 (.983 vs 98.1 in 1984); decision rule pen(1973) >= 0.9*pen(1984) AND mean growth 1973->1984 <= 1.0 pp/yr, supported if >=3/4 pass]",
+    "banned_words_for_these_constants": [
+      "pre-registered",
+      "validated"
+    ]
+  }
+}

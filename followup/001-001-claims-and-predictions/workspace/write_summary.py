@@ -1,0 +1,52 @@
+import json
+BASE="/workspace/eval/followup/001-001-claims-and-predictions"
+s={
+ "instruction_summary":"Study 001 (book, GO-WITH-SCOPE): grade Piore & Sabel (1984) checkable claims (families B,C,D) and predictions P1/P3/P4 against public statistics with per-row verdicts and NO pooled score; P2 is study 002.",
+ "completed": True,
+ "steps":[
+  {"description":"Env: create venv, install pandas/numpy/matplotlib/openpyxl","command":"uv venv /workspace/.venv && uv pip install pandas numpy matplotlib openpyxl","exit_code":0,"outputs":["/workspace/.venv"]},
+  {"description":"Gate A1: sha256 integrity of 13 staged data files vs PROVENANCE (13/13 match)","command":"sha256sum (via build_gates.py)","exit_code":0,"outputs":["results/gates.json"]},
+  {"description":"Gate A1b: re-verify all 37 §I.1b attribution locators (grep -F on HTML, pdftotext|tr|grep on PDFs) — all hit at expected counts","command":"python -I a1b_locators.py","exit_code":0,"outputs":["workspace/a1b_results.json","results/gates.json"]},
+  {"description":"Gate A2/A3: coverage sanity + staging/branch flags (no williams1987/indstat/ds140 -> restoration events not fired)","command":"python -I a2_coverage.py; python -I build_gates.py","exit_code":0,"outputs":["results/gates.json","workspace/checkpoints/A.done"]},
+  {"description":"Declared in-run fetches: FRED (OPHNFB/MFPNFBS/MANEMP/PAYEMS) + Eurostat nama_10r_2gdp BW(DE1); all HTTP 200","command":"curl fredgraph.csv / eurostat dissemination API","exit_code":0,"outputs":["workspace/data/fred_*.csv","workspace/data/eurostat_bw.json","results/fetch_log.json"]},
+  {"description":"Block B/C: compute claim series + verdicts (B1,B2,B3,C1,C4,C5,C2/C3,D1,D2,P1,P3,P4) and scorecard","command":"python -I analyze.py; python -I scorecard.py","exit_code":0,"outputs":["results/scorecard.csv","results/claim_*.csv","workspace/checkpoints/B.done"]},
+  {"description":"Figures: B1 saturation bars, C1 Emilia-Romagna spliced income, D1 two-panel plant-size","command":"python -I figures.py","exit_code":0,"outputs":["results/fig_b1_saturation.png","results/fig_c1_emilia.png","results/fig_d1_plantsize.png","workspace/checkpoints/C.done"]},
+  {"description":"Block D: findings.md, report.md, result_card.json, followup_summary.json","command":"(authored)","exit_code":0,"outputs":["results/findings.md","report.md","result_card.json","followup_summary.json","workspace/checkpoints/D.done"]}
+ ],
+ "key_results":{
+  "verdict_tally":"9 checkable claims + 3 gradeable predictions: 6 supported, 1 partially supported, 0 contradicted, 5 not-checkable",
+  "B1_durable_saturation":"supported; 4/4 durables >=0.93x their 1984 penetration by 1973 (Auto .943, Fridge 1.000, Washer .930, TV .983)",
+  "B3_productivity_slowdown":"supported; labor prod growth 2.58%->1.58%, TFP 1.71%->0.58% (1950-73 vs 1974-84)",
+  "C1_emilia_romagna":"supported; 7th(1951)->+29% vs Italy(1980)->2nd place(1995); +19.5% vs Italy / 116.8% of EU27 in 2024",
+  "C4_steel":"not-checkable (attribution); US EAF 71.8% (2024 worldsteel), 1970s level not-checkable (data)",
+  "D1_plant_size":"verdict not-checkable (attribution); data story QUALIFIED - reversal in manufacturing (small share 27.7%->32.5%, mean size 58.7->45.8) but NOT economy-wide (55.6%->52.7%, 16.2->18.3)",
+  "P1_no_recovery":"supported; manuf VA share US 16.1->10.5, DE 24.6->18.9, JP 23.4->19.5; US emp share 19.0%->8.0%",
+  "P3_flexible_spec":"partially supported (modal): districts persisted; dominance possibility not realized",
+  "a1b_locators":"37/37 verified at expected counts; no source dropped",
+  "a1_hashes":"13/13 staged data files match PROVENANCE sha256"
+ },
+ "comparison_to_original":[
+  {"quantity":"replication score / Phase 1 baseline","original":"none (book, GO-WITH-SCOPE; no replication_score.json or verdicts.json exists)","followup":"per-row verdict scorecard, no pooled score","source_file":"/workspace/eval/replication/codebase/README.md","note":"confirmed absent by design; this study IS the verification layer"},
+  {"quantity":"D1 manufacturing small-establishment employment share","original":"27.69% (BDS 1978)","followup":"32.53% (BDS 2023)","source_file":"results/claim_D1_manufacturing.csv","note":"reversal confirmed in manufacturing; opposite economy-wide"},
+  {"quantity":"US manufacturing employment share","original":"~25.1% (1970, FRED)","followup":"7.97% (2025, FRED MANEMP/PAYEMS)","source_file":"results/claim_P1_us_empshare.csv","note":"no recovery -> P1 supported"}
+ ],
+ "artifacts":[
+  "results/scorecard.csv","results/gates.json","results/fetch_log.json","results/findings.md",
+  "results/claim_B1.csv","results/claim_B3.csv","results/claim_C1.csv",
+  "results/claim_D1_economy.csv","results/claim_D1_manufacturing.csv",
+  "results/claim_P1_va.csv","results/claim_P1_us_empshare.csv",
+  "results/claim_C4_worldsteel2024.csv","results/claim_C23_bw.csv",
+  "results/fig_b1_saturation.png","results/fig_c1_emilia.png","results/fig_d1_plantsize.png"
+ ],
+ "deviations":[
+  "B3: used FRED OPHNFB (nonfarm-business labor productivity, 1947+) in place of named OPHMFG (starts 1987, cannot reach pre-1973 window) per the 'or successor' clause; series are nonfarm-business not manufacturing-only. Logged in fetch_log.json.",
+  "C4: 1970s-84 US EAF level not-checkable (data) - USGS DS140 blocked, no OA Minerals-Yearbook quote staged; only 2024 worldsteel endpoint computable (not substituted from memory).",
+  "C2/C3: Eurostat nama_10r_2gdp has no 1980s backcast (starts 2000); Italian district sector series not staged (next-tick item). Modern BW data story reported only.",
+  "P1: DE/JP manufacturing-employment-share series not staged; VA shares substitute for those two economies' employment leg.",
+  "Schema note (PS-C2 / uniform-evaluator): neither result_card.json nor followup_summary.json has a score field, so none was set to null or hand-worked-around; verdict-count tallies used. No replication_score.json/verdicts.json exists for this GO-WITH-SCOPE book by design."
+ ],
+ "remaining":[]
+}
+json.dump(s,open(f"{BASE}/followup_summary.json","w"),indent=2)
+open(f"{BASE}/workspace/checkpoints/D.done","w").write("findings/report/card/summary complete\n")
+print("followup_summary.json written; checkpoint D.done")

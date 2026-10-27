@@ -1,0 +1,163 @@
+{
+  "B1": {
+    "verdict": "supported",
+    "n_pass": 4,
+    "table": [
+      {
+        "durable": "Automobile",
+        "source": "OWID",
+        "pen_1973": 82.0,
+        "pen_1984": 87.0,
+        "ratio_73_84": 0.943,
+        "mean_growth_pp_yr": 0.455,
+        "pass_ratio": true,
+        "pass_growth": true,
+        "saturated_by_early70s": true
+      },
+      {
+        "durable": "Household refrigerator",
+        "source": "OWID",
+        "pen_1973": 99.0,
+        "pen_1984": 99.0,
+        "ratio_73_84": 1.0,
+        "mean_growth_pp_yr": 0.0,
+        "pass_ratio": true,
+        "pass_growth": true,
+        "saturated_by_early70s": true
+      },
+      {
+        "durable": "Washing machine",
+        "source": "OWID",
+        "pen_1973": 66.0,
+        "pen_1984": 71.0,
+        "ratio_73_84": 0.93,
+        "mean_growth_pp_yr": 0.455,
+        "pass_ratio": true,
+        "pass_growth": true,
+        "saturated_by_early70s": true
+      },
+      {
+        "durable": "TV",
+        "source": "Census HS-42",
+        "pen_1973": 96.4,
+        "pen_1984": 98.1,
+        "ratio_73_84": 0.983,
+        "mean_growth_pp_yr": 0.155,
+        "pass_ratio": true,
+        "pass_growth": true,
+        "saturated_by_early70s": true
+      }
+    ]
+  },
+  "B3": {
+    "verdict": "supported",
+    "detail": {
+      "labor_productivity_OPHNFB": {
+        "mean_growth_1950_1973": 2.579,
+        "mean_growth_1974_1984": 1.582,
+        "mean_growth_1974_latest": 1.873,
+        "latest_year": 2026,
+        "slowdown_73": true
+      },
+      "TFP_MFPNFBS": {
+        "mean_growth_1950_1973": 1.71,
+        "mean_growth_1974_1984": 0.584,
+        "mean_growth_1974_latest": 0.757,
+        "latest_year": 2025,
+        "slowdown_73": true
+      }
+    }
+  },
+  "C1": {
+    "verdict": "supported",
+    "historical": {
+      "1951": "7th place among Italian regions (Rinaldi, staged)",
+      "1980": "+29% vs Italian per-capita mean (Rinaldi)",
+      "1995": "2nd place; +25% vs Italian mean (Rinaldi)"
+    },
+    "modern": {
+      "2000": {
+        "ER_pps": 27800,
+        "IT_pps": 22600,
+        "EU_pps": 18400,
+        "ER_rel_IT_pct": 23.0,
+        "ER_rel_EU_index": 151.1
+      },
+      "2024": {
+        "ER_pps": 46600,
+        "IT_pps": 39000,
+        "EU_pps": 39900,
+        "ER_rel_IT_pct": 19.5,
+        "ER_rel_EU_index": 116.8
+      }
+    }
+  },
+  "D1": {
+    "verdict_cell": "not-checkable (attribution)",
+    "data_story": "qualified",
+    "economy": {
+      "share_1978": 55.62,
+      "share_2023": 52.66,
+      "share_up": "False",
+      "meansize_1978": 16.23,
+      "meansize_2023": 18.34,
+      "meansize_down": "False"
+    },
+    "manufacturing": {
+      "share_1978": 27.69,
+      "share_2023": 32.53,
+      "share_up": "True",
+      "meansize_1978": 58.74,
+      "meansize_2023": 45.82,
+      "meansize_down": "True"
+    }
+  },
+  "P1": {
+    "verdict": "supported",
+    "va_down_all3": true,
+    "us_emp_down": true,
+    "detail": {
+      "USA": {
+        "baseline_year": 1997,
+        "va_share_baseline": 16.09,
+        "endpoint_year": 2021,
+        "va_share_endpoint": 10.53
+      },
+      "DEU": {
+        "baseline_year": 1991,
+        "va_share_baseline": 24.62,
+        "endpoint_year": 2023,
+        "va_share_endpoint": 18.94
+      },
+      "JPN": {
+        "baseline_year": 1994,
+        "va_share_baseline": 23.39,
+        "endpoint_year": 2023,
+        "va_share_endpoint": 19.49
+      },
+      "US_emp_share": {
+        "1984": 18.96,
+        "2025": 7.97,
+        "1970": 25.13
+      }
+    },
+    "va_vintage_note": "PS-PROV-1 correction (study 003): WDI NV.IND.MANF.ZS has no 1984 value; the former va_share_1984/va_share_2023 keys were nearest-year substitutions, relabeled to TRUE years (USA 1997->2021, DEU 1991->2023, JPN 1994->2023). US_emp_share (FRED, genuine 1984->2025) is the vintage-clean leg that drives the verdict; direction unaffected. Values unchanged."
+  },
+  "C2C3": {
+    "verdict_cell": "not-checkable (attribution) + not-checkable (data: 1980s backcast & sector series absent)",
+    "bw_modern": {
+      "2000": {
+        "BW_pps": 26500,
+        "DE_pps": 23000,
+        "EU_pps": 18400,
+        "BW_rel_EU_index": 144.0
+      },
+      "2024": {
+        "BW_pps": 52200,
+        "DE_pps": 46400,
+        "EU_pps": 39900,
+        "BW_rel_EU_index": 130.8
+      }
+    }
+  }
+}

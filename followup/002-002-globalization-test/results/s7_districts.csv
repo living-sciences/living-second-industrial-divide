@@ -1,0 +1,8 @@
+metric,year,value,source
+rank_italy,1951,7.0,"Rinaldi (via 001, read-only)"
+pct_above_italy_mean,1980,29.0,"Rinaldi (via 001, read-only)"
+pct_above_italy_mean,1995,25.0,"Rinaldi(rank 2nd) (via 001, read-only)"
+ER_rel_IT_pct,2000,23.0,"Eurostat PPS (via 001, read-only)"
+ER_rel_IT_pct,2024,19.5,"Eurostat PPS (via 001, read-only)"
+ER_rel_EU27_index_2024,2024,116.8,Eurostat PPS (001 key_results)
+Schwartz judgment,2024,districts = 'narrow slice of industrial output'; Italy no per-capita income rise after 2000; E-R relies on cheap immigrant labor,"Schwartz 2024 (staged, attributed)"

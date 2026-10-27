@@ -1,0 +1,335 @@
+[
+  {
+    "row": "B1",
+    "source": "BHEN",
+    "locator": "by 1979 there was one car for every",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B1",
+    "source": "BHEN",
+    "locator": "households had television sets by 1970",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B1",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 184)",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B1",
+    "source": "BERG",
+    "locator": "saturation of mass consumer-good markets",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B1",
+    "source": "HAMP",
+    "locator": "According to Piore and Sabel, domestic markets for mass produced goods became saturated",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B2",
+    "source": "BHEN",
+    "locator": "Given the rigid wages and prices central to the system of macroeconomic regulation",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B2",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 176)",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B2",
+    "source": "SCHW",
+    "locator": "overly rigid production structure",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B2",
+    "source": "SCHW",
+    "locator": "presented a multitude of shocks",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B3",
+    "source": "SCHW",
+    "locator": "overly rigid production structure",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "B3",
+    "source": "HAMP",
+    "locator": "the limits of the model of industrial development that is founded on mass production",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C1",
+    "source": "SCHW",
+    "locator": "ideal model for a better future",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C1",
+    "source": "RIN",
+    "locator": "Piore e Sabel 1984",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C1",
+    "source": "STUR",
+    "locator": "provided by Piore and Sabel (1984)",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C5",
+    "source": "BHEN",
+    "locator": "the application of computers to industry favours flexible systems",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C5",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 258)",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C5",
+    "source": "BHEN",
+    "locator": "programmable equipment is used just as automatic machinery was used in the past",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C5",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 261)",
+    "expected": 2,
+    "count": 2,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C5",
+    "source": "BERG",
+    "locator": "computer-aided manufacturing (programmable assembly) might make it efficient and profitable to adjust equipment",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "D1",
+    "source": "SCHW",
+    "locator": "shrink themselves via outsourcing and demerger",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "D1",
+    "source": "SCHW",
+    "locator": "drove the vertical disintegration that",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "D1",
+    "source": "CARL",
+    "locator": "have argued that the United States is currently in a period of transition from mass production to",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "D1",
+    "source": "CARL",
+    "locator": "average establishment size declined by 12.3",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "C2C3",
+    "source": "BERG",
+    "locator": "the Italian and French industrial districts and the German and Japanese middle-firm sectors",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P1",
+    "source": "SCHW",
+    "locator": "improbable expansion of mass production and thus Keynesian policy of demand management to the global level",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P1",
+    "source": "BERG",
+    "locator": "One family of solutions would be a global Keynesianism",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P1",
+    "source": "BERG",
+    "locator": "multinational Keynesian order",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P2",
+    "source": "SCHW",
+    "locator": "They saw only two paths out of the problems animating the debate",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P2",
+    "source": "BERG",
+    "locator": "apportion the expansion of productive capacity among the advanced industrial countries",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P2",
+    "source": "BHEN",
+    "locator": "They moved into mass-produced consumer durables",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P2",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 188)",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P3",
+    "source": "SCHW",
+    "locator": "The other was a transformation of the industrial base in the direction of flexible specialization",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P3",
+    "source": "SCHW",
+    "locator": "narrow slice of industrial output",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P3",
+    "source": "SCHW",
+    "locator": "a potential second divide, for a return to flexible specialization",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P3",
+    "source": "BERG",
+    "locator": "nourish and strengthen flexible specialization and craft production",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P4",
+    "source": "HAMP",
+    "locator": "a political choice between the technology of",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  },
+  {
+    "row": "P4",
+    "source": "SCHW",
+    "locator": "utter indeterminacy of any given divide",
+    "expected": 1,
+    "count": 1,
+    "hit": true,
+    "meets_expected": true
+  }
+]

@@ -1,0 +1,10 @@
+measure,year,value,source,label
+WLD intermediate (SoP2) export share %,1988,24.25,"fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time); WITS UNCTAD-SoP staged trend","[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+WLD intermediate (SoP2) export share %,1995,23.12,"fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time); WITS UNCTAD-SoP staged trend","[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+WLD intermediate (SoP2) export share %,2000,19.45,"fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time); WITS UNCTAD-SoP staged trend","[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+WLD intermediate (SoP2) export share %,2011,20.72,"fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time); WITS UNCTAD-SoP staged trend","[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+WLD intermediate (SoP2) export share %,2023,20.81,"fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time); WITS UNCTAD-SoP staged trend","[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+GVC-related trade share of total trade (%),2022,48.0,"WTO GVC Report 2025 ch.1 (staged, p.~7): 'peak of 48% in 2022'",[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]
+GVC-related trade share of total trade (%),2024,46.3,WTO GVC Report 2025 ch.1 (staged): 'declined ... to 46.3% in 2024',[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]
+GVC participation phase (TiVA via WTO Fig 2.8),1995-2011,broad-based gains (expansion/deepening),WTO GVC Report 2025 ch.2 Box 2.1 / Fig 2.8 (staged): rapid global production expansion,[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]
+GVC participation phase (TiVA via WTO Fig 2.8),2011-2022,"backward modest, forward flat, aggregate broadly unchanged (plateau)",WTO GVC Report 2025 ch.2 (staged): 'post-2011 decade ... stagnation and divergence',[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]

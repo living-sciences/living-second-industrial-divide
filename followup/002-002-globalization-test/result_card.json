@@ -1,0 +1,60 @@
+{
+  "schema": "sai.followup.result_card/v1",
+  "headline": "Scoring Piore & Sabel's Exit 1 on 1984-2026 data across 7 pre-declared signatures: the evidence points to neither exit - the second-unbundling reading (threshold-sensitive); no hypothesis reaches the >=4-signature bar (full favors on live cells H-A 0, H-B 0, H-C 2).",
+  "status": "completed",
+  "replication_score": null,
+  "replication_score_note": "not applicable (book; GO-WITH-SCOPE) - no replication score exists or is computed (R5); verdict-count tallies below are structured, not a pooled score.",
+  "metrics": [
+    {"label": "China share of world manufacturing VA (2004->2023)", "value": "8.5% -> 27.9%",
+     "baseline": "US 21.9% -> 15.5% (2021)", "baseline_label": "WDI NV.IND.MANF.CD (staged)",
+     "note": "M1: hub concentration. Schwartz 2024 output/VA inversion (China 35% output vs 29% VA; US 12%/16%, 2023) = a MODERNIZED OPERATIONALIZATION (Kaplinsky/Schwartz), NOT a book prediction."},
+    {"label": "US mfg small-establishment (<100) emp share (1978->2011->2023)", "value": "27.7% -> 37.2% -> 32.5%",
+     "baseline": "EU27 small (<50) share 34.8% (2011) -> 29.2% (2023)", "baseline_label": "BDS via 001 + Eurostat SBS (staged)",
+     "note": "M2: long-run smallization then E3 re-concentration; EU concordant. mean estab size 58.7->39.2->45.8. PS-PROV-2 correction: EU share relabeled 2005->2011 (EU27_2020 SBS absent pre-2011 in staged file; '2005-2020' is the dataset's nominal span). CSV already honest (year=2011); E3 window (2011-2026) unaffected."},
+    {"label": "GVC/task-trade participation (S3, TiVA-degraded fallback)", "value": "rose 1995-2011, then plateaued; GVC-trade share 48.0% (2022) -> 46.3% (2024)",
+     "baseline": "WITS intermediate (SoP2) export share flat 19.45-24.92%, 1988-2023",
+     "baseline_label": "WTO GVC Report 2025 (staged) + WITS UNCTAD-SoP (staged)",
+     "note": "M3: source = fallback (TiVA endpoint degraded, verified 2026-10-27 and at run time). SoP label [PREVIEW-KNOWN]; 2011 boundary [SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]."},
+    {"label": "Evidence-grid column tallies (favors / weakly favors / against) + full favors on live cells", "value": "H-C 3/3/0 (2 live); H-A 0/3/2 (0); H-B 0/2/2 (0)",
+     "baseline": ">=4 full favors on live cells needed; none reached", "baseline_label": "pre-declared II.5 bars; 5 live cells (S1,S2,S3,S4-capped,S7)",
+     "note": "M4: S4 capped weak, so k=4 max full favors per hypothesis. Verdict routed via split+S3."},
+    {"label": "Demand-management institutions required vs existing (S6, ex-ante doc.)", "value": "0 of 2 exist",
+     "baseline": "developing-world mobile subs/100 ~0 (1995) -> China 128, Viet Nam 131 (2023)", "baseline_label": "documentary + WDI (staged)",
+     "note": "M5: institutional half of Exit 1 absent; mass consumption arrived on market terms (WTO-era integration), not via 'multinational Keynesianism'."}
+  ],
+  "tables": [
+    {"title": "Evidence grid: 7 signatures x 3 hypotheses",
+     "columns": ["Signature", "H-A new mass prod.", "H-B flexible spec.", "H-C 2nd unbundling"],
+     "rows": [
+       ["S1 scale of production unit", "weakly favors", "against", "favors"],
+       ["S2 standardization vs variety", "weakly favors", "weakly favors", "weakly favors"],
+       ["S3 trade composition", "against", "not separable", "favors"],
+       ["S4 governance (cap: weak)", "weakly against", "weakly favors", "weakly favors"],
+       ["S5 skill (declared weak)", "not separable", "not separable", "not separable"],
+       ["S6 demand instit. (ex-ante doc.)", "against", "against", "favors"],
+       ["S7 districts (partial)", "weakly favors", "weakly against", "weakly favors"]
+     ],
+     "highlight_row": 0}
+  ],
+  "figures": [
+    {"file": "results/fig_evidence_grid.png",
+     "caption": "Evidence grid: 7 signatures x 3 hypotheses. Verdict: neither - the unbundling reading (threshold-sensitive); no hypothesis reaches >=4 full favors on live cells.",
+     "alt": "7x3 color-coded grid; H-C column shows favors for S1, S3, S6 and weakly-favors elsewhere; H-A and H-B have no full favors."},
+    {"file": "results/fig_scale.png",
+     "caption": "S1: China hub concentration of manufacturing VA (left) and US plant-size smallization-then-E3-re-concentration (right), era-shaded. The production unit splits by geography and era.",
+     "alt": "Left: China share of world manufacturing VA rising to ~28% while US falls; right: US small-establishment share rising to 2011 then falling, mean size mirror-imaged."},
+    {"file": "results/fig_composition.png",
+     "caption": "S3: WITS UNCTAD-SoP export mix (intermediate share flat in [PREVIEW-KNOWN] band) and the WTO rise-then-plateau GVC-participation summary (TiVA endpoint degraded -> fallback).",
+     "alt": "Left: four SoP export-share lines, intermediate flat ~20-25%; right: text panel summarizing GVC participation rising 1995-2011 then plateauing, 48%->46.3% share, ~30% US-China decoupling."}
+  ],
+  "notes": [
+    "BOOK under GO-WITH-SCOPE: no Phase-1 replication and no replication score, by design (R5). Verdict tallies are structured, not a pooled score.",
+    "P2 provisional anchor is graded as worded (PROVISIONAL-PENDING-H1); gate A1b re-run at run start, 6/6 inherited P2 locators hit -> anchor live (Schwartz, Berger, Bhengu). No output asserts 'the book says X at p.Y' or 'the book predicted China'.",
+    "H-A hub-concentration and profit-structure (output/VA inversion) components are MODERNIZED OPERATIONALIZATIONS by Kaplinsky 2023 / Schwartz 2024, not book components.",
+    "Fork-not-forecast: 'The book posed Exit 1 and Exit 2 as politically contingent possibilities, not forecasts; neither exit's non-realization is, by itself, a failed prediction.'",
+    "TiVA endpoint degraded (HTTP 500) at run time -> binding WTO+WITS fallback for S3 (logged in fetch_log.json). INDSTAT excluded (H3). Pre-2004 China VA share not substituted (specced source not staged).",
+    "Steel PREVIEW label stated China ~91.6% BOF (the 91.6 is the Austria row in the staged worldsteel table); computed China BOF = 89.8%, US majority-EAF (71.8%) confirmed.",
+    "Labels [PREVIEW-KNOWN] (flat SoP; steel split) and [SOURCE-DERIVED] (2011 boundary) are carried, not 'pre-registered'/'validated' (PS-C1). Threshold-sensitive: H-C clears only via the split+S3 route."
+  ],
+  "report_file": "report.md"
+}

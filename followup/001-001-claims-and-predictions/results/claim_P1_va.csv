@@ -1,0 +1,4 @@
+iso,baseline_year,va_share_baseline,endpoint_year,va_share_endpoint,note
+USA,1997,16.09,2021,10.53,WDI NV.IND.MANF.ZS true coverage; relabeled from mislabeled '1984->2023' (PS-PROV-1); series first non-missing year 1997 and last 2021 for USA so no 1984 baseline exists
+DEU,1991,24.62,2023,18.94,WDI NV.IND.MANF.ZS true coverage; relabeled from mislabeled '1984->2023' (PS-PROV-1); series first non-missing year 1991 for DEU
+JPN,1994,23.39,2023,19.49,WDI NV.IND.MANF.ZS true coverage; relabeled from mislabeled '1984->2023' (PS-PROV-1); series first non-missing year 1994 for JPN

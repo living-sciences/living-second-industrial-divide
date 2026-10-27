@@ -1,0 +1,17 @@
+import json
+RES="/workspace/eval/followup/001-001-claims-and-predictions/results"
+log={"generated":"2026-10-27","policy":"keyless, foreground, logged; staged-data-only except declared in-run branches (I.3)",
+ "fetches":[
+  {"branch":"I.3.1 FRED (B3/P1)","id":"OPHMFG","url":"https://fred.stlouisfed.org/graph/fredgraph.csv?id=OPHMFG","ts_utc":"2026-10-27T17:38:06Z","http":200,"coverage":"1987Q1-2026Q2","note":"manufacturing labor productivity; starts 1987 — TOO LATE for the 1950-73 vs post-73 B3 window; retained for reference only"},
+  {"branch":"I.3.1 FRED (B3)","id":"MFPNFBS","url":"https://fred.stlouisfed.org/graph/fredgraph.csv?id=MFPNFBS","ts_utc":"2026-10-27T17:38:06Z","http":200,"coverage":"1948-2025 annual","note":"TFP leg, nonfarm business multifactor productivity (named series)"},
+  {"branch":"I.3.1 FRED (B3)","id":"OPHNFB","url":"https://fred.stlouisfed.org/graph/fredgraph.csv?id=OPHNFB","ts_utc":"2026-10-27T17:38:46Z","http":200,"coverage":"1947Q1-2026Q2","note":"labor-productivity leg SUCCESSOR per 'OPHMFG-or-successor': nonfarm business output/hour (the canonical long productivity-slowdown series); substituted because OPHMFG does not reach pre-1973 — logged deviation"},
+  {"branch":"I.3.1 FRED (P1)","id":"MANEMP","url":"https://fred.stlouisfed.org/graph/fredgraph.csv?id=MANEMP","ts_utc":"2026-10-27T17:38:06Z","http":200,"coverage":"1939-2026 monthly","note":"US manufacturing employment (thousands)"},
+  {"branch":"I.3.1 FRED (P1)","id":"PAYEMS","url":"https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS","ts_utc":"2026-10-27T17:38:06Z","http":200,"coverage":"1939-2026 monthly","note":"US total nonfarm employment; MANEMP/PAYEMS = US manufacturing employment share"},
+  {"branch":"I.3.2 Eurostat (C2/C3 upgrade)","id":"nama_10r_2gdp geo=DE1,DE,EU27_2020","url":"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?geo=DE1&geo=DE&geo=EU27_2020&unit=EUR_HAB&unit=PPS_EU27_2020_HAB&format=JSON&lang=EN","ts_utc":"2026-10-27T17:38:46Z","http":200,"coverage":"2000-2024 only","note":"BW (DE1) modern regional GDP delivered; NO 1980s backcast available in nama_10r_2gdp -> C3 historical 'same phenomenon' stays not-checkable (data). Modern BW data story reportable."}
+ ],
+ "not_attempted":[
+  {"id":"USGS DS140","reason":"I.3.3 — blocked CDN (403 bot filter); no in-run attempt permitted; no staged copy under shared-data/steel/ -> C4 uses literature-quoted EAF branch"},
+  {"id":"UNIDO INDSTAT","reason":"H3 not cleared (registration wall); excluded"}
+ ]}
+json.dump(log, open(f"{RES}/fetch_log.json","w"), indent=2)
+print("fetch_log.json written;", len(log["fetches"]), "fetches logged")

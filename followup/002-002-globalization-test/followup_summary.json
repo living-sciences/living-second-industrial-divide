@@ -1,0 +1,52 @@
+{
+  "instruction_summary": "Study 002 (book, GO-WITH-SCOPE): score Piore & Sabel (1984) Exit-1 prediction P2 (the reader question - is globalization a new mass-production system?) as a three-hypothesis evidence-weighing contest (H-A new mass production / H-B flexible specialization at global scale / H-C neither: the second unbundling) across seven pre-declared falsifiable signatures on 1984-2026 public data; per-cell verdicts, one overall verdict in the fixed vocabulary, NO pooled/replication score.",
+  "completed": true,
+  "steps": [
+    {"description": "Env: create venv, install pandas/numpy/matplotlib", "command": "uv venv /workspace/.venv && uv pip install pandas numpy matplotlib", "exit_code": 0, "outputs": ["/workspace/.venv"]},
+    {"description": "Gate A1b: re-grep the 6 inherited P2 anchor locators (Schwartz HTML, Berger PDF, Bhengu PDF) at run start -> all hit count=1 -> P2 anchor live", "command": "grep -F / pdftotext|tr|grep -F (build_gates.py)", "exit_code": 0, "outputs": ["results/gates.json"]},
+    {"description": "Gate A1: sha256 integrity of 13 staged data files vs PROVENANCE (13/13 match)", "command": "python -I build_gates.py", "exit_code": 0, "outputs": ["results/gates.json", "results/fetch_log.json"]},
+    {"description": "Declared TiVA retry (II.4, keyless): HTTP 500 across key shapes -> binding fallback (WTO GVC Report 2025 + WITS trend)", "command": "curl 'https://sdmx.oecd.org/public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/...'", "exit_code": 0, "outputs": ["workspace/data/tiva_retry.csv", "results/fetch_log.json"]},
+    {"description": "Build S1-S3 signatures (WDI VA shares, BDS via 001, Eurostat SBS 2 panels, worldsteel split, WITS SoP, mobile diffusion)", "command": "python -I build_signatures.py", "exit_code": 0, "outputs": ["results/s1_scale.csv", "results/s1_us_estab_manuf.csv", "results/s1_eu_sizeclass.csv", "results/s1_steel_split.csv", "results/s2_standardization.csv", "results/s3_composition.csv"]},
+    {"description": "Build S4/S6/S7 + E3 discriminator + evidence grid + verdict + effective denominator", "command": "python -I build_grid.py", "exit_code": 0, "outputs": ["results/s4_governance.csv", "results/s6_institutions.md", "results/s7_districts.csv", "results/evidence_table.csv"]},
+    {"description": "Figures: fig_scale, fig_composition, fig_evidence_grid (era-shaded, Okabe-Ito)", "command": "python -I figures.py", "exit_code": 0, "outputs": ["results/fig_scale.png", "results/fig_composition.png", "results/fig_evidence_grid.png"]},
+    {"description": "Author findings.md, report.md, result_card.json, followup_summary.json", "command": "(authored)", "exit_code": 0, "outputs": ["results/findings.md", "report.md", "result_card.json", "followup_summary.json"]}
+  ],
+  "key_results": {
+    "verdict": "neither - the unbundling reading (the second unbundling), threshold-sensitive",
+    "verdict_route": "no hypothesis reaches >=4 full favors on live cells (H-A 0, H-B 0, H-C 2); split condition met (S1 splits + S4 mixed + none >=4) AND S3 favors H-C -> routes to the unbundling verdict; dichotomy-fails condition simultaneously satisfied",
+    "tallies_favors_weaklyfavors_against": {"H-A": "0/3/2", "H-B": "0/2/2", "H-C": "3/3/0"},
+    "S1_scale": "favors H-C: China world-manuf-VA share 8.5%->27.9% (2004-23) + integrated BOF mills vs Western smallization/EAF mini-mills; US small-estab share 27.7%->37.2%(2011)->32.5%(2023); unit splits by geography & era",
+    "S2_standardization": "weakly measured (all weak): smartphone diffusion (standardization) + Shein variety (company-claimed)",
+    "S3_composition": "favors H-C: GVC participation rose 1995-2011 then plateaued (WTO Fig 2.8); GVC-trade share 48%->46.3%; US-China ~30% below trend since 2018. WITS SoP2 intermediate flat 19.45-24.92%",
+    "S4_governance": "capped weak: captive in power (Schwartz three-layer chain) + modular/relational form (GHS/Sturgeon)",
+    "S5_skill": "not separable on staged data (fixed by declaration)",
+    "S6_institutions": "ex-ante-decided (documentary): 0 of 2 demand-management institutions exist; mass consumption arrived on market terms (mobile subs ~0->128 China, 131 Viet Nam by 2023)",
+    "S7_districts": "partially measured: E-R persists but relative advantage declined (+29%->+19.5% vs Italy 1980-2024); 'narrow slice' (Schwartz)",
+    "E3_discriminator": "not separable this tick: plant re-concentration fired (US+EU) but standardization-reversal did not; geopolitics/ICT side fired 3/3 -> one side partial + other firing -> not separable",
+    "P2_anchor": "live (6/6 inherited locators hit; Schwartz+Berger+Bhengu); graded as worded, PROVISIONAL-PENDING-H1",
+    "a1_hashes": "13/13 staged data files match PROVENANCE sha256",
+    "replication_score": "null - not applicable (book; GO-WITH-SCOPE)"
+  },
+  "comparison_to_original": [
+    {"quantity": "replication score / Phase-1 baseline", "original": "none (book, GO-WITH-SCOPE; no replication_score.json/verdicts.json)", "followup": "per-signature evidence grid + one verdict, no pooled score", "source_file": "/workspace/eval/replication/codebase/README.md", "note": "absent by design; 001 is the verification layer, 002 scores P2"},
+    {"quantity": "US mfg small-establishment emp share (1978->2023)", "original": "27.69% -> 32.53%", "followup": "reused; S1b adds E3 reading: rose to 37.2% (2011) then fell to 32.5% (re-concentration)", "source_file": "/workspace/eval/followup/001-001-claims-and-predictions/results/claim_D1_manufacturing.csv", "note": "long-run smallization then recent re-concentration"},
+    {"quantity": "Emilia-Romagna relative income", "original": "+29% vs Italy (1980) -> +19.5% (2024)", "followup": "reused for S7 (district persistence as 'narrow slice', relative decline)", "source_file": "/workspace/eval/followup/001-001-claims-and-predictions/results/claim_C1.csv", "note": "S7 weakly favors H-A and H-C, weakly against H-B"},
+    {"quantity": "P2 anchor locators", "original": "37/37 verified incl. P2 (handed to 002)", "followup": "6/6 inherited P2 locators re-grepped, all hit -> anchor live", "source_file": "/workspace/eval/followup/001-001-claims-and-predictions/results/gates.json", "note": "gate A1b re-run at run start"}
+  ],
+  "artifacts": [
+    "results/findings.md", "results/gates.json", "results/fetch_log.json",
+    "results/s1_scale.csv", "results/s1_us_estab_manuf.csv", "results/s1_eu_sizeclass.csv", "results/s1_steel_split.csv",
+    "results/s2_standardization.csv", "results/s3_composition.csv", "results/s4_governance.csv",
+    "results/s6_institutions.md", "results/s7_districts.csv", "results/evidence_table.csv",
+    "results/fig_scale.png", "results/fig_composition.png", "results/fig_evidence_grid.png"
+  ],
+  "deviations": [
+    "TiVA retry (II.4) returned HTTP 500 across key shapes at run time (endpoint degraded); binding fallback used for S3 (WTO GVC Report 2025 chapters, page-cited, + staged WITS trend). Logged in fetch_log.json.",
+    "Pre-2004 China manufacturing-VA-share cells NOT substituted: the specced source (recency-research.md 5.4 literature values) is not among this run's staged inputs; China hub finding rests on staged WDI 2004-2023.",
+    "Steel PREVIEW label stated China ~91.6% BOF; the staged worldsteel-2025 table gives China 89.8% BOF (the 91.6 is the Austria row). Reported as computed; label travels (R-6).",
+    "INDSTAT (H3) excluded (registration-gated, not staged); S1 rests on US/EU size series + hub-share data. USGS DS140 blocked, not attempted.",
+    "S5 (skill) not scored by design; S4 capped weak; S2 weakly measured; S7 partially measured (pre-declared).",
+    "Schema (PS-C2): gates.json sets replication_score=null ('not applicable (book; GO-WITH-SCOPE)'); card/summary carry no score field, so no hand-around needed; verdict-count tallies (structured) used. Reported for any pipeline-level fix per the uniform-evaluator rule."
+  ],
+  "remaining": []
+}

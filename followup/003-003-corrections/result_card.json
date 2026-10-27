@@ -1,0 +1,56 @@
+{
+  "schema": "sai.followup.result_card/v1",
+  "headline": "Applied exactly the 5 audit corrections (PS-PROV-1..5) + the China-BOF record-keeping item to studies 001/002: all 6 done, 18 old->new changes logged, 0 verdict words or grid cells changed and no score.",
+  "status": "completed",
+  "replication_score": null,
+  "replication_score_note": "Not applicable (books under GO-WITH-SCOPE); this corrective study inherits the parent studies' score-free rule. No numeric/pooled score is produced.",
+  "metrics": [
+    {"label": "Audit corrections applied (of 5) + record-keeping item", "value": "5 + 1 = all 6",
+     "baseline": "0 (pre-correction)", "baseline_label": "parent studies 001/002 as audited",
+     "note": "PS-PROV-1..5 applied in place; item 6 recorded in preview_corrections.md."},
+    {"label": "Verdict words / grid cells changed", "value": "0",
+     "baseline": "0 allowed", "baseline_label": "instruction (binding)",
+     "note": "every item is a label/provenance/sourcing fix; nothing upgraded."},
+    {"label": "P1 VA baseline year (USA), mislabeled -> true", "value": "1997",
+     "baseline": "1984 (mislabeled)", "baseline_label": "001 findings.md / claim_P1_va.csv (pre-edit)",
+     "note": "PS-PROV-1: WDI NV.IND.MANF.ZS has no 1984 value (USA 1997->2021, DEU 1991, JPN 1994); values unchanged, FRED employment leg drives the verdict."},
+    {"label": "EU small-plant share start year, mislabeled -> true", "value": "2011",
+     "baseline": "2005 (mislabeled)", "baseline_label": "002 findings.md / card M2 (pre-edit)",
+     "note": "PS-PROV-2: EU27_2020 SBS absent pre-2011; CSV already honest (year=2011); E3 window unaffected."},
+    {"label": "China crude-steel BOF share (spec PREVIEW -> computed)", "value": "89.8%",
+     "baseline": "91.6% (= worldsteel Austria row)", "baseline_label": "spec [PREVIEW-KNOWN] constant",
+     "note": "Item 6: recorded in preview_corrections.md, flagged for H1 re-grade + spec/PROVENANCE; spec not edited; gates nothing."}
+  ],
+  "tables": [
+    {"title": "The six items and their outcomes",
+     "columns": ["Item", "Study", "Type", "Action", "Verdict moved?"],
+     "rows": [
+       ["PS-PROV-1 P1 VA vintage", "001", "material", "relabel 1984->true WDI years (4 surfaces) + seam note", "no"],
+       ["PS-PROV-3 C4 log notes", "001", "minor", "2 stale 'literature-quoted' notes -> not-checkable (data)", "no"],
+       ["PS-PROV-4 B1 label block", "001", "cosmetic", "add [PREVIEW-CALIBRATED] block to gates.json", "no"],
+       ["PS-PROV-2 EU SBS vintage", "002", "material", "relabel 34.8% (2005)->(2011), 6 surfaces + note", "no"],
+       ["PS-PROV-5 Foxconn figure", "002", "minor", "no staged source -> REMOVE ~200k-350k, keep sentence", "no"],
+       ["Item 6 China BOF preview", "001/002", "record", "preview_corrections.md 91.6->89.8; spec not edited", "no"]
+     ],
+     "highlight_row": 0}
+  ],
+  "figures": [
+    {"file": "results/fig1_p1_va_vintage.png",
+     "caption": "PS-PROV-1: staged WDI manufacturing-VA series (NV.IND.MANF.ZS) start only at USA 1997 / DEU 1991 / JPN 1994 (orange rings) - there is no 1984 value, so the 'claimed 1984 baseline' (dashed line) has no data; the labels are relabeled to these true years.",
+     "alt": "Three VA-share lines for US, Germany, Japan beginning in the 1990s; a dashed vertical at 1984 marked 'no WDI data'; the first point of each series is ringed."},
+    {"file": "results/fig2_eu_sbs_vintage.png",
+     "caption": "PS-PROV-2: the EU27 small-plant (<50 emp) share series begins at 2011 (34.8%, ringed), not 2005; the mislabeled '(2005)' is relabeled to the true 2011 start. The E3 window (2011-2026, shaded) is unaffected.",
+     "alt": "EU27 small-plant share line across two panels (2011-2020 and 2021-2024) with the first point at 2011 ringed and the E3 window shaded."},
+    {"file": "results/fig3_china_bof_preview.png",
+     "caption": "Item 6: the spec's PREVIEW 'China ~91.6% BOF' is the worldsteel Austria row (91.6%); China's computed basic-oxygen share is 89.8%. US is majority electric-arc (28.2% BOF). Recorded, not applied to the spec.",
+     "alt": "Bar chart: Austria 91.6% (the source of the figure), China spec-preview 91.6% hatched, China computed 89.8%, United States 28.2%, with an arrow showing the Austria->China correction."}
+  ],
+  "notes": [
+    "Corrective study: no parent pipeline re-run; every load-bearing number recomputed cold from the staged read-only data before editing. Parent files edited in place; all edited JSON re-validated.",
+    "No verdict word and no evidence-grid cell changed; no numeric/pooled score produced (score-free GO-WITH-SCOPE rule inherited). Nothing was upgraded.",
+    "Framing honored: mislabeled vintages relabeled to TRUE years with a seam note (never implying coverage that does not exist); the unsourced Foxconn number was REMOVED (no staged citable figure), not kept on memory.",
+    "Item 6: the China-BOF preview correction is recorded in results/preview_corrections.md and flagged for the H1 re-grade branch and the spec/PROVENANCE record; the spec itself (orchestrator's file) was not edited.",
+    "All 18 file-level old -> new changes are logged in results/card_corrections.csv (file, item, old, new, reason)."
+  ],
+  "report_file": "report.md"
+}

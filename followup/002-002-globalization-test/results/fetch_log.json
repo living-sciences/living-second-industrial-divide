@@ -1,0 +1,25 @@
+{
+ "generated": "2026-10-27",
+ "study": "002-globalization-test",
+ "fetches": [
+  {
+   "branch": "TiVA retry (II.4, preferred for S3)",
+   "keyless": true,
+   "query": "https://sdmx.oecd.org/public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/all?format=csvfilewithlabels",
+   "timestamp": "2026-10-27 run time",
+   "http_status": 500,
+   "result": "Internal server error",
+   "action": "degraded -> BINDING fallback engaged (WTO GVC Report 2025 chapters, page-cited, + staged WITS SoP trend)"
+  },
+  {
+   "branch": "TiVA retry (II.4, structured key)",
+   "keyless": true,
+   "query": "https://sdmx.oecd.org/public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/A.USA+CHN+DEU+JPN+WLD.EXGR_FVASH+EXGR_DVASH._T",
+   "timestamp": "2026-10-27 run time",
+   "http_status": 500,
+   "result": "Internal server error",
+   "action": "confirms endpoint still degraded at run time (verified 2026-10-27 and at run time)"
+  }
+ ],
+ "no_other_fetch": "staged data only otherwise; no FRED needed (001 outputs reused); no login; no book text; INDSTAT/USGS not attempted (gated/blocked)"
+}

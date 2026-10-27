@@ -1,0 +1,22 @@
+signature,hypothesis,cell,basis,ex_ante_label,preview_label
+S1 scale of production unit,H-A,weakly favors,hub concentration of manuf VA in China (8.5%->27.9% 2004-23) fits H-A; but Western plant-sizes fell long-run (mega-plant leg not met),,"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+S1 scale of production unit,H-B,against,China hub concentration contradicts 'smallization everywhere',,"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+S1 scale of production unit,H-C,favors,SPLITS by geography/chain position: China scale+integrated BOF mills vs Western smallization+EAF mini-mills; US smallization 1978-2011 then E3 re-concentration - the unit is not well-defined on one axis,,"[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]"
+S2 standardization vs variety,H-A,weakly favors,smartphone/mobile diffusion = standardized global consumer product spreading (China 0.3->128.2/100); smartphone-as-Model-T,weakly measured,
+S2 standardization vs variety,H-B,weakly favors,"variety / mass-customization in named case lit (Shein, company-claimed)",weakly measured,
+S2 standardization vs variety,H-C,weakly favors,standardization in components/tasks + variety in consumption = both layers,weakly measured,
+S3 trade composition,H-A,against,final goods do not dominate; intermediates substantial; task/GVC trade present,,"[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+S3 trade composition,H-B,not separable,differentiated intermediates between equals partly consistent but not decisive,,"[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+S3 trade composition,H-C,favors,GVC/task-trade participation rose 1995-2011 then plateaued post-2011 (WTO Fig 2.8); regionalization+US-China ~30% decoupling since 2018 - H-C's rise-then-plateau + regionalization. WITS SoP intermediate share FLAT 19.45-24.92% whole window (narrower UNCTAD-SoP measure; SoP!=BEC seam),,"[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]"
+S4 chain governance (WEAK-CELL CAP),H-A,weakly against,GHS cases moved AWAY from captive/hierarchy toward modular/relational. literature-coded from a staged corpus whose composition cannot measure the population governance mix,,
+S4 chain governance (WEAK-CELL CAP),H-B,weakly favors,GHS/Sturgeon document modular/relational forms. literature-coded from a staged corpus whose composition cannot measure the population governance mix,,
+S4 chain governance (WEAK-CELL CAP),H-C,weakly favors,Schwartz three-layer lead-firm-power chain (captive in power) + modular form = H-C synthesis. literature-coded from a staged corpus whose composition cannot measure the population governance mix,,
+S5 skill content (DECLARED WEAK),H-A,not separable,fixed by declaration (mirror of D2); one literature paragraph only,fixed by declaration,
+S5 skill content (DECLARED WEAK),H-B,not separable,fixed by declaration,fixed by declaration,
+S5 skill content (DECLARED WEAK),H-C,not separable,fixed by declaration,fixed by declaration,
+S6 demand-side institutions,H-A,against,P2-as-written required constructed global demand management; it does not exist. Market-led scale without institutions = 'half of Exit 1' (partial cell),ex-ante-decided (documentary),
+S6 demand-side institutions,H-B,against,no regional demand institutions balancing competition/cooperation; WTO is market-led,ex-ante-decided (documentary),
+S6 demand-side institutions,H-C,favors,"market-led integration, no demand institutions, decay via geopolitics/tariffs/industrial policy - exactly H-C",ex-ante-decided (documentary),
+S7 district persistence (partially measured),H-A,weakly favors,districts a 'narrow slice' (Schwartz); E-R relative advantage declined post-2000 (+29%->+19.5% vs Italy) = partial marginalization,,
+S7 district persistence (partially measured),H-B,weakly against,relative decline post-2000 undercuts 'thriving exporters inside GVCs' (pre-declared against-H-B),,
+S7 district persistence (partially measured),H-C,weakly favors,E-R persists where it holds design/IP-intensive niches; Pearl River Delta the biggest district - persistence tied to position,,

@@ -1,0 +1,74 @@
+{
+  "schema": "sai.followup.result_card/v1",
+  "headline": "Of 9 checkable claims and 3 gradeable predictions, 6 supported, 1 partially supported, 0 contradicted, 5 not-checkable; every book-value anchor provisional pending a lawful copy (H1); the globalization prediction (P2) is scored separately in 002.",
+  "status": "completed",
+  "metrics": [
+    {"label": "D1 — manufacturing small-plant (<100 emp) employment share",
+     "value": "32.5% (2023)", "baseline": "27.7% (1978)",
+     "baseline_label": "Census BDS 1978",
+     "note": "plant-size reversal is manufacturing-only (mean estab size 58.7→45.8); economy-wide the opposite — Schwartz's outsourcing twist. D1 verdict cell = not-checkable (attribution)"},
+    {"label": "C1 — Emilia-Romagna per-capita income vs Italian mean",
+     "value": "+29% by 1980; 2nd place by 1995", "baseline": "7th place (1951)",
+     "baseline_label": "Rinaldi, staged WP",
+     "note": "supported; Eurostat PPS endpoint +19.5% vs Italy (116.8% of EU27) in 2024, reported not graded"},
+    {"label": "B1 — durable saturation by early 1970s (1973 penetration)",
+     "value": "Auto 82.0, Fridge 99.0, Washer 66.0, TV 96.4%", "baseline": "≥ 90% of 1984 level",
+     "baseline_label": "OWID / Census HS-42",
+     "note": "supported; all 4 durables ≥0.93× their 1984 level by 1973 [PREVIEW-CALIBRATED]; TV from HS-42 (OWID TV starts 1992)"},
+    {"label": "C4 — US EAF (minimill) steel share",
+     "value": "71.8% (2024, worldsteel)", "baseline": "not-checkable (data)",
+     "baseline_label": "USGS DS140 blocked; no OA quote staged",
+     "note": "DATA TRAJECTORY, not a graded book claim; C4 anchor demoted (zero attribution sources). China 10.2% EAF / 89.8% BOF"},
+    {"label": "Verdict tally (no pooled score)",
+     "value": "6 supported / 1 partial / 0 contradicted / 5 not-checkable", "baseline": "no replication score (book; GO-WITH-SCOPE)",
+     "baseline_label": "Phase 0 briefing",
+     "note": "structured counts over 9 claims + 3 predictions (P2 handed to study 002)"}
+  ],
+  "tables": [
+    {"title": "Scorecard (provisional anchors, H1 pending)",
+     "columns": ["Row", "Verdict", "Attribution"],
+     "rows": [
+       ["B1 durable saturation", "supported", "double-sourced"],
+       ["B2 demand-regime break 1971-79", "supported (timeline)", "double-sourced"],
+       ["B3 productivity exhausted", "supported", "double-sourced"],
+       ["C1 Emilia-Romagna income", "supported", "double-sourced"],
+       ["C4 specialty steel/minimills", "not-checkable (attrib.)", "demoted"],
+       ["C5 programmable tech → small batch", "supported (implication)", "double-sourced"],
+       ["C2/C3 districts / BW-Japan", "not-checkable (data+attrib.)", "demoted"],
+       ["D1 plant-size reversal", "not-checkable (attrib.)", "demoted"],
+       ["D2 deskill/re-skill", "not-checkable ([LIT])", "not graded"],
+       ["P1 mass prod. won't recover", "supported", "double-sourced"],
+       ["P3 flexible spec. could dominate", "partially supported (modal)", "double-sourced"],
+       ["P4 exits are political choice", "not-checkable ([INTERP])", "not graded"]
+     ],
+     "highlight_row": 10},
+    {"title": "B1 durable saturation test (pen 1973 vs 1984)",
+     "columns": ["Durable", "1973", "1984", "ratio", "growth pp/yr", "pass"],
+     "rows": [
+       ["Automobile (OWID)", "82.0", "87.0", "0.943", "0.46", "yes"],
+       ["Household refrigerator (OWID)", "99.0", "99.0", "1.000", "0.00", "yes"],
+       ["Washing machine (OWID)", "66.0", "71.0", "0.930", "0.46", "yes"],
+       ["TV (Census HS-42)", "96.4", "98.1", "0.983", "0.15", "yes"]
+     ]}
+  ],
+  "figures": [
+    {"file": "results/fig_d1_plantsize.png",
+     "caption": "D1: the plant-size reversal is a manufacturing phenomenon (orange) — small-plant employment share rises and mean establishment size falls — while economy-wide (blue) the opposite holds. BDS 1978-2023; shaded = pre-1978 literature-quoted segment (Carlsson 1988).",
+     "alt": "Two-panel line chart; manufacturing small-establishment share rises and mean size falls, economy-wide trends opposite."},
+    {"file": "results/fig_c1_emilia.png",
+     "caption": "C1: Emilia-Romagna per-capita income relative to the Italian mean — Rinaldi historical values (+29% by 1980, 2nd place by 1995) spliced to the modern Eurostat PPS series (+19.5% in 2024). 1951 was 7th place (rank, not %).",
+     "alt": "Line chart of Emilia-Romagna relative income over time with a labelled splice between historical and modern sources."},
+    {"file": "results/fig_b1_saturation.png",
+     "caption": "B1: US household penetration of four consumer durables in 1973 vs 1984; all four were already at ≥93% of their 1984 level by 1973 (ratio labelled), so core durable markets were saturated by the early 1970s.",
+     "alt": "Grouped bar chart comparing 1973 and 1984 penetration for automobile, refrigerator, washing machine and TV."}
+  ],
+  "notes": [
+    "No replication score and no pooled score anywhere (R5/H4/PS-C2): this is a claims-verification scorecard for a book under GO-WITH-SCOPE, not a replication. No score field exists in the result_card or followup_summary schema, so none was nulled or worked around; the tallies above are structured verdict counts (allowed). The GO-WITH-SCOPE book has no replication_score.json/verdicts.json by design (confirmed absent).",
+    "Williams et al. (1987, Economy & Society 16(3)) audited these claims at publication; it is paywalled and was not read; our verdicts are independent of it and must be compared against it before external publication. (Gate A3: williams1987 not staged, so C4/D1 restoration events did not fire.)",
+    "Every book-value anchor is PROVISIONAL-PENDING-H1; no 'the book says p.Y' claim is made. C4, D1 and C2/C3 are demoted to not-checkable (attribution) and their data stories are reported without book attribution.",
+    "Deviation (logged): B3 uses FRED OPHNFB (nonfarm-business labor productivity, 1947+) because the named OPHMFG series starts only in 1987 and cannot reach the pre-1973 window ('or successor' clause).",
+    "C4 historical EAF has no staged supply route (USGS DS140 blocked, no OA Minerals-Yearbook quote), so only the 2024 worldsteel endpoint is computable; C2/C3 has no 1980s Eurostat backcast and no staged Italian district sector series (named next-tick item).",
+    "P2 (Exit 1 / globalization) is out of scope here and is study 002 entire."
+  ],
+  "report_file": "report.md"
+}

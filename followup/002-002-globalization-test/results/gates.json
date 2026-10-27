@@ -1,0 +1,172 @@
+{
+ "generated": "2026-10-27",
+ "study": "002-globalization-test",
+ "launch_line": "REPLICATION: NOT APPLICABLE - BOOK, GO-WITH-SCOPE (Phase 0); THIS STUDY SCORES PREDICTION P2 (THE READER QUESTION)",
+ "replication_score": null,
+ "replication_score_status": "not applicable (book; GO-WITH-SCOPE) - no replication_score.json / verdicts.json exists by design",
+ "A1_hash_integrity": {
+  "declared_files_checked": 13,
+  "matched": 13,
+  "mismatched": [],
+  "files": [
+   {
+    "file": "worldbank-wdi/wdi_manufacturing_trade_1960_2025.csv",
+    "expected": "6e33494746a95aa2ee9a7933ac6388915203e2c070e1489b73d7022b36342bdc",
+    "got": "6e33494746a95aa2ee9a7933ac6388915203e2c070e1489b73d7022b36342bdc",
+    "match": true
+   },
+   {
+    "file": "worldbank-wdi/wdi_durables_diffusion_demand_side.csv",
+    "expected": "4919c90924067d434057b0159cd634c1e6d6aa8a0025ad598e0404aa515e39eb",
+    "got": "4919c90924067d434057b0159cd634c1e6d6aa8a0025ad598e0404aa515e39eb",
+    "match": true
+   },
+   {
+    "file": "wits-intermediates/wits_unctad_sop_product_shares.csv",
+    "expected": "e3efc0453b8d115126062a11df82a47c3752c48c4f7e13a17e70341e1cb809ce",
+    "got": "e3efc0453b8d115126062a11df82a47c3752c48c4f7e13a17e70341e1cb809ce",
+    "match": true
+   },
+   {
+    "file": "census-bds/bds2023_ez.csv",
+    "expected": "c3310039b69987ee5838826a626bbf00d0bfa3dba79a805ae03572fdd8b116ca",
+    "got": "c3310039b69987ee5838826a626bbf00d0bfa3dba79a805ae03572fdd8b116ca",
+    "match": true
+   },
+   {
+    "file": "census-bds/bds2023_sec_ez.csv",
+    "expected": "ccc20556eca518bd1c285212642fee74e1c622167b3bb660fe5f630f082219d8",
+    "got": "ccc20556eca518bd1c285212642fee74e1c622167b3bb660fe5f630f082219d8",
+    "match": true
+   },
+   {
+    "file": "eurostat/nama_10r_2gdp_emilia_romagna.json",
+    "expected": "54ac84e960db2da1c4581a854f64b5b1c9f9b2c667b5c77ed5ef1f92b591bc4a",
+    "got": "54ac84e960db2da1c4581a854f64b5b1c9f9b2c667b5c77ed5ef1f92b591bc4a",
+    "match": true
+   },
+   {
+    "file": "eurostat/sbs_sc_ind_r2_manufacturing_sizeclass.json",
+    "expected": "074258f2d4af172daa4594053e548caa6936a204909de7f3063a9f5542f6991d",
+    "got": "074258f2d4af172daa4594053e548caa6936a204909de7f3063a9f5542f6991d",
+    "match": true
+   },
+   {
+    "file": "eurostat/sbs_sc_ovw_manufacturing_sizeclass.json",
+    "expected": "f286f523317f80b792c87b1abd23631a20ef3c4b9cc270f82b8d25abf2afb25d",
+    "got": "f286f523317f80b792c87b1abd23631a20ef3c4b9cc270f82b8d25abf2afb25d",
+    "match": true
+   },
+   {
+    "file": "steel/world-steel-in-figures-2025.pdf",
+    "expected": "a830f0b9cb8237dc5131145cffb8ff6eb7ce5b5f0930f6abf8ff6fc383da48d4",
+    "got": "a830f0b9cb8237dc5131145cffb8ff6eb7ce5b5f0930f6abf8ff6fc383da48d4",
+    "match": true
+   },
+   {
+    "file": "owid-durables/us_household_technology_adoption.csv",
+    "expected": "4436d028351dd2e1deae5521db76f77a8b3b6b72a75fb1d2ca88ba9ff518cc5a",
+    "got": "4436d028351dd2e1deae5521db76f77a8b3b6b72a75fb1d2ca88ba9ff518cc5a",
+    "match": true
+   },
+   {
+    "file": "census-statab/hs-42-selected-communications-media-1920-2001.pdf",
+    "expected": "55804674e8ecb19d565476e2359fccfa62fad9f2e455f57bbe9b432a52b0d7c4",
+    "got": "55804674e8ecb19d565476e2359fccfa62fad9f2e455f57bbe9b432a52b0d7c4",
+    "match": true
+   },
+   {
+    "file": "wto-gvc-report/gvcreport2025-01_e.pdf",
+    "expected": "50de298a3b30a86cb998180fd0cd0f60799388b50d27c2f3daaf678652843dca",
+    "got": "50de298a3b30a86cb998180fd0cd0f60799388b50d27c2f3daaf678652843dca",
+    "match": true
+   },
+   {
+    "file": "wto-gvc-report/gvcreport2025-02_e.pdf",
+    "expected": "f79ca87c10b5b3cdc80a4958125d94b3804b5344f5f3d89b13b37fb8e16b9131",
+    "got": "f79ca87c10b5b3cdc80a4958125d94b3804b5344f5f3d89b13b37fb8e16b9131",
+    "match": true
+   }
+  ]
+ },
+ "A1b_P2_anchor_locators": {
+  "note": "P2 anchor inherits 001's I.1b locators verbatim (PS-B4); re-run at run start; demote on miss",
+  "checks": [
+   {
+    "row": "P2",
+    "source": "SCHW",
+    "locator": "They saw only two paths out of the problems animating the debate",
+    "count": 1,
+    "hit": true
+   },
+   {
+    "row": "P2",
+    "source": "SCHW",
+    "locator": "improbable expansion of mass production and thus Keynesian policy of demand management to the global level",
+    "count": 1,
+    "hit": true
+   },
+   {
+    "row": "P2",
+    "source": "BERG",
+    "locator": "apportion the expansion of productive capacity among the advanced industrial countries",
+    "count": 1,
+    "hit": true
+   },
+   {
+    "row": "P2",
+    "source": "BERG",
+    "locator": "multinational Keynesian order",
+    "count": 1,
+    "hit": true
+   },
+   {
+    "row": "P2",
+    "source": "BHEN",
+    "locator": "They moved into mass-produced consumer durables",
+    "count": 1,
+    "hit": true
+   },
+   {
+    "row": "P2",
+    "source": "BHEN",
+    "locator": "(Piore & Sabel, 1984: 188)",
+    "count": 1,
+    "hit": true
+   }
+  ],
+  "all_hit": true,
+  "verified_attribution_sources": [
+   "BERG",
+   "BHEN",
+   "SCHW"
+  ],
+  "book_anchor_status": "live (>=2 independent attribution sources verified: BERG, BHEN, SCHW) - P2 provisional anchor graded as worded, tagged PROVISIONAL-PENDING-H1"
+ },
+ "A2_coverage": {
+  "wdi_manuf_VA_2004_2023": true,
+  "wits_sop_1988_2023": true,
+  "eurostat_sbs_2005_2020_and_2021plus": true,
+  "worldsteel_2024_process_split": true,
+  "wto_gvc_report_ch1_ch2": true,
+  "status": "PASS"
+ },
+ "A3_branch_flags": {
+  "indstat_staged": false,
+  "indstat_status": "excluded (H3, honest exclusion): UNIDO INDSTAT registration-gated; S1 rests on US/EU size series + hub-share data",
+  "tiva_retry": "attempted at run start, HTTP 500 across key shapes (degraded) -> BINDING fallback: WTO GVC Report 2025 chapters + WITS trend",
+  "fred_shared": "not needed (001 outputs present); no FRED fetch this study",
+  "williams1987_staged": false,
+  "usgs_ds140_staged": false
+ },
+ "preview_calibration_labels_PS_C1": {
+  "flat_SoP_condition": "[PREVIEW-KNOWN: WLD SoP2 export share 19.45-24.92%, flat 1988-2023, stated at spec time]",
+  "steel_geography_split": "[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]",
+  "era_boundary_2011": "[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]",
+  "B1_saturation_rule": "[PREVIEW-CALIBRATED] (001 artifact; not re-graded here)",
+  "banned_words_for_these_constants": [
+   "pre-registered",
+   "validated"
+  ]
+ }
+}

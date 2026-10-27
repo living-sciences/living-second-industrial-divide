@@ -1,0 +1,5 @@
+durable,source,pen_1973,pen_1984,ratio_73_84,mean_growth_pp_yr,pass_ratio,pass_growth,saturated_by_early70s
+Automobile,OWID,82.0,87.0,0.943,0.455,True,True,True
+Household refrigerator,OWID,99.0,99.0,1.0,0.0,True,True,True
+Washing machine,OWID,66.0,71.0,0.93,0.455,True,True,True
+TV,Census HS-42,96.4,98.1,0.983,0.155,True,True,True

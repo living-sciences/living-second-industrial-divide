@@ -1,0 +1,204 @@
+{
+ "S1a_VA_share": {
+  "CHN_2004": 8.51,
+  "CHN_2011": 20.21,
+  "CHN_2023": 27.92,
+  "USA_2004": 21.92,
+  "USA_2011": 15.56,
+  "USA_2021": 15.46,
+  "note_pre2004_CHN": "pre-2004 China VA-share cells were specced from recency-research.md 5.4 literature values; that file is NOT in this run's staged inputs, so pre-2004 China cells are NOT substituted from memory (deviation). WDI staged series begins 2004."
+ },
+ "S1b_BDS_manuf": {
+  "small_share_1978": 27.69,
+  "small_share_2011": 37.23,
+  "small_share_2023": 32.53,
+  "mean_size_1978": 58.74,
+  "mean_size_2011": 39.16,
+  "mean_size_2023": 45.82,
+  "source": "001 results/claim_D1_manufacturing.csv (BDS 2023, reused read-only)"
+ },
+ "S1c_EU_SBS": {
+  "small_lt50_share_2011": 34.84,
+  "small_lt50_share_2020": 30.17,
+  "small_lt50_share_2021": 30.4,
+  "small_lt50_share_2023": 29.23,
+  "large_ge250_share_2011": 40.14,
+  "large_ge250_share_2020": 48.3,
+  "note": "two panels, dataset break 2020/2021 (indicator + size-class codes change). PS-PROV-2 correction (study 003): keys relabeled _2005 -> _2011; the EU27_2020 SBS aggregate is absent pre-2011 in the staged sbs_sc_ind_r2 file, so 34.84/40.14 are the 2011 values ('2005-2020' is the dataset's nominal span, not this value's vintage). s1_eu_sizeclass.csv already honest (year=2011); E3 window (2011-2026) unaffected."
+ },
+ "S1d_INDSTAT": {
+  "staged": false,
+  "status": "excluded (H3): UNIDO INDSTAT is registration-gated; S1 verdict rests on US/EU size series plus hub-share data. No workaround."
+ },
+ "S1_steel": {
+  "CHN_BOF_pct": 89.8,
+  "USA_EAF_pct": 71.8,
+  "label": "[PREVIEW-KNOWN: China ~91.6% BOF / US majority-EAF, worldsteel 2025, stated at spec time]",
+  "note": "spec PREVIEW label stated China ~91.6% BOF (the 91.6 is the Austria row in the staged table); computed China BOF = 89.8%. US majority-EAF confirmed (71.8%)."
+ },
+ "S1e_megaplant": {
+  "row": "mega-plant descriptive (DESCRIPTIVE ONLY, NO verdict weight)",
+  "note": "Foxconn/EMS assembly-giant scale (Zhengzhou 'iPhone City') illustrates assembly-giant concentration; descriptive only, no verdict weight. PS-PROV-5 correction (study 003): the from-memory '~200k-350k at peak' employment figure had no staged source and is REMOVED. Staged texts checked (Kaplinsky 2023, WTO GVC ch.1 & ch.2, Schwartz 2024) contain no citable single-plant employment figure -- Kaplinsky names Foxconn only as a triangular-governance intermediary -- so no value is moved to s1_scale.csv."
+ },
+ "S2": {
+  "SoP2_interm_1988": 24.25,
+  "SoP2_interm_2023": 20.81,
+  "SoP2_min": 19.45,
+  "SoP2_max": 24.92,
+  "SoP3_consumer_1988": 30.51,
+  "SoP3_consumer_2023": 32.73,
+  "mob_CHN_1995_2023": [
+   0.3,
+   128.2
+  ],
+  "label": "weakly measured; smartphone/mobile diffusion is the measurable leg"
+ },
+ "S3": {
+  "SoP2_flat": [
+   24.25,
+   20.81
+  ],
+  "SoP2_min_max": [
+   19.45,
+   24.92
+  ],
+  "wto_gvc_share_peak_2022": 48.0,
+  "wto_gvc_share_2024": 46.3,
+  "participation": "rose 1995-2011 then plateaued post-2011 (WTO Fig 2.8); US-China bilateral ~30% below trend since 2018 tariffs (WTO ch.1)",
+  "source_label": "fallback (TiVA endpoint degraded 2026-10-27 and at run time)"
+ },
+ "S4": {
+  "documented_instances_in_staged_corpus": {
+   "modular": 5,
+   "market": 1,
+   "hierarchy(origin)": 2,
+   "relational": 3,
+   "captive": 3,
+   "scale/power(paradigm)": 2
+  },
+  "reading": "modular/relational dominant in FORM (GHS/Sturgeon); captive-in-POWER added by Schwartz; corpus cannot measure population mix",
+  "fixed_sentence": "literature-coded from a staged corpus whose composition cannot measure the population governance mix",
+  "weak_cell_cap": "S4 cells take at most weakly favors / weakly against / not separable"
+ },
+ "S7": {
+  "ER_rel_IT_1980": 29.0,
+  "ER_rel_IT_2024": 19.5,
+  "ER_rel_EU27_2024": 116.8,
+  "reading": "E-R persists and remains above EU/Italy mean but its RELATIVE advantage declined post-2000 (+29% -> +19.5% vs Italy; Italy stagnant); 'narrow slice' (Schwartz). partially measured."
+ },
+ "S6": {
+  "n_required": 2,
+  "n_exist": 0,
+  "institutions_required": [
+   "international demand management / 'multinational Keynesianism' (constructed global demand-stabilizing institution)",
+   "labor-share / capacity-apportionment mechanisms in the South (apportioning expansion of productive capacity among countries; global Keynesian demand coordination)"
+  ],
+  "exists_instead": [
+   "WTO accession and rules-based market integration (market-led, not demand-coordinating)",
+   "GVC participation without any demand-coordination institution",
+   "post-2018 geopolitics: tariffs, friend-shoring, national industrial policy (decay handled by geopolitics, not by demand institutions)"
+  ],
+  "dev_mobile": {
+   "CHN": {
+    "1995": 0.3,
+    "2023": 128.2
+   },
+   "IND": {
+    "1995": 0.0,
+    "2023": 80.6
+   },
+   "VNM": {
+    "1995": 0.0,
+    "2023": 131.0
+   },
+   "BRA": {
+    "1995": 0.8,
+    "2023": 101.0
+   },
+   "MEX": {
+    "1995": 0.8,
+    "2023": 111.7
+   },
+   "IDN": {
+    "1995": 0.1,
+    "2023": 125.2
+   }
+  },
+  "result_sentence": "The institutional half of Exit 1 is absent: none of the demand-management institutions P2-as-worded required (0 of 2) was constructed; developing-world mass consumption did arrive on market terms - mobile subscriptions per 100 people rose from near zero in 1995 (China 0.3, India 0.0, Viet Nam 0.0) to at or above saturation by 2023 (China 128.2, India 80.6, Viet Nam 131.0), but it was delivered by WTO-era market integration and private GVC participation, not by any 'multinational Keynesian' demand-coordinating institution - so the global mass-consumption market exists while the institutions that P&S's Exit 1 said would stabilize it do not.",
+  "label": "ex-ante-decided (documentary)"
+ },
+ "E3_discriminator": {
+  "scale_decay_cond_i_plant_reconcentration": {
+   "US": true,
+   "EU_concordant": true,
+   "fired": true
+  },
+  "scale_decay_cond_ii_standardization_reversal": {
+   "consumer_2011_2023": [
+    30.59,
+    32.73
+   ],
+   "intermediate_2011_2023": [
+    20.72,
+    20.81
+   ],
+   "fired": false,
+   "note": "consumer share rose but intermediates FLAT (rose at expense of raw, not intermediates) -> (ii) NOT met"
+  },
+  "scale_decay_fires_both": false,
+  "geopolitics_ICT_decay": {
+   "i_us_china_30pct_below_trend_since_2018": true,
+   "ii_rerouting_friendshoring_mexico_vietnam": true,
+   "iii_services_digital_resilient_goods_plateau": true
+  },
+  "geo_count": 3,
+  "geopol_fires": true,
+  "result": "not separable this tick",
+  "label_2011_boundary": "[SOURCE-DERIVED: WTO GVC Report 2025 plateau finding]",
+  "per_side_tally": "scale-decay: (i) plant re-concentration FIRED (US+EU), (ii) standardization reversal NOT fired -> scale side PARTIAL; geopolitics/ICT: 3/3 fired -> FIRES. One side partial + other firing -> 'not separable this tick'."
+ },
+ "tallies": {
+  "H-A": {
+   "favors": 0,
+   "weakly favors": 3,
+   "against": 2,
+   "weakly against": 1,
+   "not separable": 1,
+   "full_favors_on_live_cells": 0
+  },
+  "H-B": {
+   "favors": 0,
+   "weakly favors": 2,
+   "against": 2,
+   "weakly against": 1,
+   "not separable": 2,
+   "full_favors_on_live_cells": 0
+  },
+  "H-C": {
+   "favors": 3,
+   "weakly favors": 3,
+   "against": 0,
+   "weakly against": 0,
+   "not separable": 1,
+   "full_favors_on_live_cells": 2
+  }
+ },
+ "effective_denominator": "Effective denominator: with S5 fixed by declaration and S6 ex-ante-decided (documentary), there are 5 live cells (S1, S2, S3, S4-capped-weak, S7). Because S4 is capped to at most a weak cell, each hypothesis can reach at most k=4 FULL favors on live cells (from S1, S2, S3, S7). Read against the >=4 bars: H-A full-favors=0, H-B=0, H-C=2.",
+ "verdict": {
+  "verdict": "neither - the unbundling reading",
+  "conditions": {
+   "hA_S1andS2_and_4favors": false,
+   "hB_4favors": false,
+   "hC_4favors_inclS3": false,
+   "split_condition_dichotomy_fails": true,
+   "s3_favors_hC": true,
+   "s1_splits": true,
+   "s4_mixed": true,
+   "no_hypothesis_reaches_4": true
+  },
+  "route": "H-C via the split condition (S1 splits + S4 mixed + no hypothesis reaches >=4) PLUS S3 favoring H-C",
+  "dichotomy_fails_also_satisfied": true,
+  "threshold_sensitive": true,
+  "threshold_note": "H-C reaches only 2 full favors on live cells (S1, S3), below the >=4 bar; the verdict rests on the split+S3 route with several weak contributing cells (S2, S4-capped, S7) -> threshold-sensitive."
+ }
+}
